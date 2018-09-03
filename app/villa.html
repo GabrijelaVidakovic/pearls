@@ -8,227 +8,229 @@
 
 <body>
   <div class="wrapper">
-    <!--Navigation-->
-    <div class="header__wrapper border-img">
-      <nav class="navigation">
-        <i class="fa fa-times fa-2x toggle-btn" aria-hidden="true"></i>
-        <ul class="menu__items menu">
-          <li class="menu__item {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
-          <li class="menu__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('form') }}">Villas</a></li>
-          <li class="menu__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('gallery') }}">What we offer</a></li>
-          <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Contact & About</a></li>
-          <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Blog</a></li>
-        </ul>
-      </nav>
-<!--Header-->
-      <header>
-        <div class="block">
-          <i class="fa fa-bars fa-2x toggle-btn" aria-hidden="true"></i>
-          <p class="language uppercase">en</p>
-        </div>
+    <div class="container">
+      <!--Navigation-->
+      <div class="header__wrapper border-img">
+        <nav class="navigation">
+          <i class="fa fa-times fa-2x toggle-btn" aria-hidden="true"></i>
+          <ul class="menu__items menu">
+            <li class="menu__item {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
+            <li class="menu__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('form') }}">Villas</a></li>
+            <li class="menu__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('gallery') }}">What we offer</a></li>
+            <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Contact & About</a></li>
+            <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Blog</a></li>
+          </ul>
+        </nav>
+  <!--Header-->
+        <header>
+          <div class="block">
+            <i class="fa fa-bars fa-2x toggle-btn" aria-hidden="true"></i>
+            <p class="language uppercase">en</p>
+          </div>
 
-        <div class="block">
-          <a href="/homepage">
-            <img src="images/logo.png" class="logo" alt="Pearls">
-          </a>
-        </div>
+          <div class="block">
+            <a href="/homepage">
+              <img src="images/logo.png" class="logo" alt="Pearls">
+            </a>
+          </div>
 
-        <div class="block block--right">
-          <p class="telephone"><a href="tel:+649-232-7989">+649-232-7989</a></p>
-          <button type="contact" class="btn btn-icon">
-            <i class="fas fa-building icon"></i>book now
-          </button>
-        </div>
-      </header>
-    </div>
-
-<!--Intro-->
-    <section class="intro">
-      <p class="uppercase headline center">Your home away from home</p>
-      <h1 class="center">East Pearl House</h1>
-      <p class="villa__desc uppercase center"><span class="villa__value">13 </span>ROOMS FOR 14 PEOPLE, <span class="villa__value">18</span> BATHROOMS, <span class="villa__value">PRIVATE BEACH</span> NEXT TO THE VILLA</p>
-      <p class="intro__desc">Discretely located directly on the silky sands of world renowned Long Bay beach in Providenciales, Turks & Caicos Islands, The Pearls are marvelous beachfront homes that offer unforgettable views of the azure blue Atlantic. These stunning 8 bed 8.5 bath beachfront villas marry the essence of the Caribbean with extreme luxury, resulting in 12000 square feet each of simple splendor, sophistication and seclusion. Whether visiting for a romantic getaway or to escape the real world with your family and friends, welcome to the magical world of The Pearls of Long Bay Estate.</p>
-    </section>
-
-<!--Features-->
-    <section class="features wave">
-      <p class="uppercase headline center">EVERYTHING SHOULD BE PERFECT</p>
-      <h2 class="center">Features & Amenities</h2>
-      <div class="grid">
-        <ul>
-          <li><i class="fas fa-suitcase fa-1x icon"></i>King size bed</li>
-          <li> Ensuite bathroom</li>
-          <li>Ceiling fans</li>
-
-        </ul>
-        <ul>
-          <li>Alarm system and guard</li>
-          <li> Ceiling fans</li>
-          <li>Telephone</li>
-        </ul>
-        <ul>
-          <li>Heated pool</li>
-          <li>Parking</li>
-          <li>BBQ Grill</li>
-
-        </ul>
-        <ul>
-          <li>Car Rental</li>
-          <li> Private Chef</li>
-          <li>Welcome Amenity</li>
-        </ul>
-
+          <div class="block block--right">
+            <p class="telephone"><a href="tel:+649-232-7989">+649-232-7989</a></p>
+            <button type="contact" class="btn btn-icon">
+              <i class="fas fa-building icon"></i>book now
+            </button>
+          </div>
+        </header>
       </div>
-    </section>
 
-    <!--Map-->
-    <section class="map wave">
-      <p class="uppercase headline center">In the heart of an island</p>
-      <h2 class="center">Location on Map</h2>
-      <!-- <img src="images/contact/map.png" class="" alt="About us"> -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13987.51632917218!2d-72.17283730344491!3d21.77083591286262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x894b4f1eb1621de3%3A0x757bf98f009462e!2sLong+Bay+Beach+Club!5e1!3m2!1shr!2shr!4v1535879909480" width="1800" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </section>
+  <!--Intro-->
+      <section class="intro">
+        <p class="uppercase headline center">Your home away from home</p>
+        <h1 class="center">East Pearl House</h1>
+        <p class="villa__desc uppercase center"><span class="villa__value">13 </span>ROOMS FOR 14 PEOPLE, <span class="villa__value">18</span> BATHROOMS, <span class="villa__value">PRIVATE BEACH</span> NEXT TO THE VILLA</p>
+        <p class="intro__desc">Discretely located directly on the silky sands of world renowned Long Bay beach in Providenciales, Turks & Caicos Islands, The Pearls are marvelous beachfront homes that offer unforgettable views of the azure blue Atlantic. These stunning 8 bed 8.5 bath beachfront villas marry the essence of the Caribbean with extreme luxury, resulting in 12000 square feet each of simple splendor, sophistication and seclusion. Whether visiting for a romantic getaway or to escape the real world with your family and friends, welcome to the magical world of The Pearls of Long Bay Estate.</p>
+      </section>
 
-  <!--About us-->
-  <section class="about-us wave-bg">
-    <p class="uppercase headline center">Our story</p>
-    <h2 class="center">About us</h2>
-    <div class="grid grid--small">
-      <div class="block gutter-r medium-6 large-5-5">
-        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare mauris, in facilisis mauris. Morbi laoreet convallis odio, eget placerat urna faucibus convallis. Duis ac nunc sed nunc pharetra vulputate. Donec efficitur justo eu efficitur tempus. Nullam tristique pharetra arcu a mattis. Duis neque nunc, maximus a leo et, blandit sollicitudin lectus. Fusce vel augue nisi. Vivamus sit amet suscipit lorem. Fusce luctus sapien ac ex porta, sed molestie elit viverra. Donec pretium semper arcu.</p>
+  <!--Features-->
+      <section class="features wave">
+        <p class="uppercase headline center">EVERYTHING SHOULD BE PERFECT</p>
+        <h2 class="center">Features & Amenities</h2>
+        <div class="grid">
+          <ul>
+            <li><i class="fas fa-suitcase fa-1x icon"></i>King size bed</li>
+            <li> Ensuite bathroom</li>
+            <li>Ceiling fans</li>
 
-        <p class="desc">Proin aliquam volutpat tempor. Sed diam turpis, molestie at lobortis non, molestie semper dui. Aenean pharetra aliquet turpis, eget laoreet arcu venenatis ac. Vivamus metus risus, accumsan eget nulla vitae, suscipit tempor metus. Pellentesque nibh risus, sollicitudin quis tristique vitae, maximus in elit. </p>
+          </ul>
+          <ul>
+            <li>Alarm system and guard</li>
+            <li> Ceiling fans</li>
+            <li>Telephone</li>
+          </ul>
+          <ul>
+            <li>Heated pool</li>
+            <li>Parking</li>
+            <li>BBQ Grill</li>
 
-        <p class="desc">Etiam sed justo consectetur, vestibulum mauris at, posuere felis. Aenean nec ultrices sapien, a dignissim augue. Integer iaculis gravida felis, at consequat sem mollis malesuada. condimentum purus libero, mollis posuere ante pellentesque eleifend. Sed faucibus pulvinar ex eu accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-      </div>
-      <div class="block gutter-l medium-6 large-5-5">
-        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare mauris, in facilisis mauris. Morbi laoreet convallis odio, eget placerat urna faucibus convallis. Duis ac nunc sed nunc pharetra vulputate. Donec efficitur justo eu efficitur tempus. Nullam tristique pharetra arcu a mattis. Duis neque nunc, maximus a leo et, blandit sollicitudin lectus. Fusce vel augue nisi. Vivamus sit amet suscipit lorem. Fusce luctus sapien ac ex porta, sed molestie elit viverra. Donec pretium semper arcu.</p>
+          </ul>
+          <ul>
+            <li>Car Rental</li>
+            <li> Private Chef</li>
+            <li>Welcome Amenity</li>
+          </ul>
 
-        <p class="desc">Proin aliquam volutpat tempor. Sed diam turpis, molestie at lobortis non, molestie semper dui. Aenean pharetra aliquet turpis, eget laoreet arcu venenatis ac. Vivamus metus risus, accumsan eget nulla vitae, suscipit tempor metus. Pellentesque nibh risus, sollicitudin quis tristique vitae, maximus in elit. </p>
-
-        <p class="desc">Etiam sed justo consectetur, vestibulum mauris at, posuere felis. Aenean nec ultrices sapien, a dignissim augue. Integer iaculis gravida felis, at consequat sem mollis malesuada. condimentum purus libero, mollis posuere ante pellentesque eleifend. Sed faucibus pulvinar ex eu accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-      </div>
-    </div>
-  </section>
-
-  <!--Teaser-->
-    <section class="teaser border-img wave">
-      <div class="grid">
-        <div class="block">
-          <p class="uppercase headline left">Just relax</p>
-          <h2 class="block__subtitle left">There are</h2>
-          <p></p>
         </div>
-        <div class="block center">
-          <h2 class="block__subtitle teaser__number center">350</h2>
-          <p class="uppercase headline center">Sunny days in a year</p>
-        </div>
+      </section>
 
-        <div class="block center small-none">
-          <h2 class="block__subtitle teaser__number center">400</h2>
-          <p class="uppercase headline center">Ft of sandy beach</p>
-        </div>
-        <div class="block center small-none">
-          <h2 class="block__subtitle teaser__number center">0</h2>
-          <p class="uppercase headline center">Reasons to worry about</p>
-        </div>
+      <!--Map-->
+      <section class="map wave">
+        <p class="uppercase headline center">In the heart of an island</p>
+        <h2 class="center">Location on Map</h2>
+        <!-- <img src="images/contact/map.png" class="" alt="About us"> -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13987.51632917218!2d-72.17283730344491!3d21.77083591286262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x894b4f1eb1621de3%3A0x757bf98f009462e!2sLong+Bay+Beach+Club!5e1!3m2!1shr!2shr!4v1535879909480" width="1800" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </section>
 
-        <div class="block center small-none">
-          <button type="contact" class="btn"><i class="fas fa-suitcase fa-2x icon"></i> book now
-          </button>
+    <!--About us-->
+    <section class="about-us wave-bg">
+      <p class="uppercase headline center">Our story</p>
+      <h2 class="center">About us</h2>
+      <div class="grid grid--small">
+        <div class="block gutter-r medium-6 large-5-5">
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare mauris, in facilisis mauris. Morbi laoreet convallis odio, eget placerat urna faucibus convallis. Duis ac nunc sed nunc pharetra vulputate. Donec efficitur justo eu efficitur tempus. Nullam tristique pharetra arcu a mattis. Duis neque nunc, maximus a leo et, blandit sollicitudin lectus. Fusce vel augue nisi. Vivamus sit amet suscipit lorem. Fusce luctus sapien ac ex porta, sed molestie elit viverra. Donec pretium semper arcu.</p>
+
+          <p class="desc">Proin aliquam volutpat tempor. Sed diam turpis, molestie at lobortis non, molestie semper dui. Aenean pharetra aliquet turpis, eget laoreet arcu venenatis ac. Vivamus metus risus, accumsan eget nulla vitae, suscipit tempor metus. Pellentesque nibh risus, sollicitudin quis tristique vitae, maximus in elit. </p>
+
+          <p class="desc">Etiam sed justo consectetur, vestibulum mauris at, posuere felis. Aenean nec ultrices sapien, a dignissim augue. Integer iaculis gravida felis, at consequat sem mollis malesuada. condimentum purus libero, mollis posuere ante pellentesque eleifend. Sed faucibus pulvinar ex eu accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        </div>
+        <div class="block gutter-l medium-6 large-5-5">
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare mauris, in facilisis mauris. Morbi laoreet convallis odio, eget placerat urna faucibus convallis. Duis ac nunc sed nunc pharetra vulputate. Donec efficitur justo eu efficitur tempus. Nullam tristique pharetra arcu a mattis. Duis neque nunc, maximus a leo et, blandit sollicitudin lectus. Fusce vel augue nisi. Vivamus sit amet suscipit lorem. Fusce luctus sapien ac ex porta, sed molestie elit viverra. Donec pretium semper arcu.</p>
+
+          <p class="desc">Proin aliquam volutpat tempor. Sed diam turpis, molestie at lobortis non, molestie semper dui. Aenean pharetra aliquet turpis, eget laoreet arcu venenatis ac. Vivamus metus risus, accumsan eget nulla vitae, suscipit tempor metus. Pellentesque nibh risus, sollicitudin quis tristique vitae, maximus in elit. </p>
+
+          <p class="desc">Etiam sed justo consectetur, vestibulum mauris at, posuere felis. Aenean nec ultrices sapien, a dignissim augue. Integer iaculis gravida felis, at consequat sem mollis malesuada. condimentum purus libero, mollis posuere ante pellentesque eleifend. Sed faucibus pulvinar ex eu accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
         </div>
       </div>
     </section>
 
-  <!--Villas-->
-    <section class="villas">
-      <p class="uppercase headline center">For your pleasure</p>
-      <h2 class="center">Villas</h2>
-      <div class="grid grid--full">
+    <!--Teaser-->
+      <section class="teaser border-img wave">
+        <div class="grid">
+          <div class="block">
+            <p class="uppercase headline left">Just relax</p>
+            <h2 class="block__subtitle left">There are</h2>
+            <p></p>
+          </div>
+          <div class="block center">
+            <h2 class="block__subtitle teaser__number center">350</h2>
+            <p class="uppercase headline center">Sunny days in a year</p>
+          </div>
 
-        <div class="block large-3 medium-6">
-          <img src="images/west.png" class="border-img" alt="About us">
-          <div class="block__content">
-            <h4>West Pearl House</h4>
-            <ul class="content__items">
-              <li>Acommodates 14 people</li>
-              <li>13 rooms and 8 bathrooms</li>
-              <li>Big pool with natural water</li>
-              <li>Private beach next to the Villa</li>
-            </ul>
-            <button type="contact" class="btn">learn more
+          <div class="block center small-none">
+            <h2 class="block__subtitle teaser__number center">400</h2>
+            <p class="uppercase headline center">Ft of sandy beach</p>
+          </div>
+          <div class="block center small-none">
+            <h2 class="block__subtitle teaser__number center">0</h2>
+            <p class="uppercase headline center">Reasons to worry about</p>
+          </div>
+
+          <div class="block center small-none">
+            <button type="contact" class="btn"><i class="fas fa-suitcase fa-2x icon"></i> book now
             </button>
           </div>
         </div>
-        <div class="block large-3 medium-6">
-          <img src="images/west.png" class="border-img" alt="About us">
-          <div class="block__content">
-            <h4>West Pearl House</h4>
-            <ul class="content__items">
-              <li>Acommodates 14 people</li>
-              <li>13 rooms and 8 bathrooms</li>
-              <li>Big pool with natural water</li>
-              <li>Private beach next to the Villa</li>
-            </ul>
-            <button type="contact" class="btn">learn more
-            </button>
+      </section>
+
+    <!--Villas-->
+      <section class="villas">
+        <p class="uppercase headline center">For your pleasure</p>
+        <h2 class="center">Villas</h2>
+        <div class="grid grid--full">
+
+          <div class="block large-3 medium-6">
+            <img src="images/west.png" class="border-img" alt="About us">
+            <div class="block__content">
+              <h4>West Pearl House</h4>
+              <ul class="content__items">
+                <li>Acommodates 14 people</li>
+                <li>13 rooms and 8 bathrooms</li>
+                <li>Big pool with natural water</li>
+                <li>Private beach next to the Villa</li>
+              </ul>
+              <button type="contact" class="btn">learn more
+              </button>
+            </div>
+          </div>
+          <div class="block large-3 medium-6">
+            <img src="images/west.png" class="border-img" alt="About us">
+            <div class="block__content">
+              <h4>West Pearl House</h4>
+              <ul class="content__items">
+                <li>Acommodates 14 people</li>
+                <li>13 rooms and 8 bathrooms</li>
+                <li>Big pool with natural water</li>
+                <li>Private beach next to the Villa</li>
+              </ul>
+              <button type="contact" class="btn">learn more
+              </button>
+            </div>
+          </div>
+          <div class="block large-3 medium-6">
+            <img src="images/west.png" class="border-img" alt="About us">
+            <div class="block__content">
+              <h4>West Pearl House</h4>
+              <ul class="content__items">
+                <li>Acommodates 14 people</li>
+                <li>13 rooms and 8 bathrooms</li>
+                <li>Big pool with natural water</li>
+                <li>Private beach next to the Villa</li>
+              </ul>
+              <button type="contact" class="btn">learn more
+              </button>
+            </div>
           </div>
         </div>
-        <div class="block large-3 medium-6">
-          <img src="images/west.png" class="border-img" alt="About us">
-          <div class="block__content">
-            <h4>West Pearl House</h4>
-            <ul class="content__items">
-              <li>Acommodates 14 people</li>
-              <li>13 rooms and 8 bathrooms</li>
-              <li>Big pool with natural water</li>
-              <li>Private beach next to the Villa</li>
-            </ul>
-            <button type="contact" class="btn">learn more
-            </button>
+      </section>
+
+    <!--Footer -->
+    <section class="footer">
+      <div class="grid grid-medium">
+        <div class="block large-2">
+          <img src="images/logo.png" class="footer__logo" alt="About us">
+          <p class="footer__desc">In the Turks & Caicos Islands, they say magic happens. At The Pearls of Long Bay Estate, you're sure to find yours</p>
+        </div>
+        <div class="block block--right large-6">
+          <div class="block--inline footer__subject">
+            <p class="uppercase">Villas:</p>
+            <p class="uppercase">Contact us:</p>
+            <p class="uppercase">Social:</p>
           </div>
+
+        <div class="block--inline">
+          <ul class="nav__items">
+            <li class="nav__item {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
+            <li class="nav__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('villas') }}">Villas</a></li>
+            <li class="nav__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('offer') }}">What we offer</a></li>
+            <li class="nav__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('contact') }}">Contact & About</a></li>
+            <li class="nav__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('blog') }}">Blog</a></li>
+          </ul>
+
+          <ul class="footer__items">
+            <li class="footer__item">info@pearlstci.com </li>
+            <li class="footer__item ">events@pearlstci.com </li>
+            <li class="footer__item">+649-232-7989</li>
+          </ul>
+
+          <ul class="footer__items">
+            <li class="footer__item"><i class="fab fa-facebook-square"></i></li>
+            <li class="footer__item "><i class="fab fa-instagram"></i> </li>
+            <li class="footer__item"><i class="fab fa-twitter-square"></i></li>
+          </ul>
+
+          <ul class="footer__items">
+            <li class="footer__item">Copyright © Pearls of Long Bay</li>
+          </ul>
         </div>
-      </div>
-    </section>
-
-  <!--Footer -->
-  <section class="footer">
-    <div class="grid grid-medium">
-      <div class="block large-2">
-        <img src="images/logo.png" class="footer__logo" alt="About us">
-        <p class="footer__desc">In the Turks & Caicos Islands, they say magic happens. At The Pearls of Long Bay Estate, you're sure to find yours</p>
-      </div>
-      <div class="block block--right large-6">
-        <div class="block--inline footer__subject">
-          <p class="uppercase">Villas:</p>
-          <p class="uppercase">Contact us:</p>
-          <p class="uppercase">Social:</p>
-        </div>
-
-      <div class="block--inline">
-        <ul class="nav__items">
-          <li class="nav__item {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
-          <li class="nav__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('villas') }}">Villas</a></li>
-          <li class="nav__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('offer') }}">What we offer</a></li>
-          <li class="nav__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('contact') }}">Contact & About</a></li>
-          <li class="nav__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('blog') }}">Blog</a></li>
-        </ul>
-
-        <ul class="footer__items">
-          <li class="footer__item">info@pearlstci.com </li>
-          <li class="footer__item ">events@pearlstci.com </li>
-          <li class="footer__item">+649-232-7989</li>
-        </ul>
-
-        <ul class="footer__items">
-          <li class="footer__item"><i class="fab fa-facebook-square"></i></li>
-          <li class="footer__item "><i class="fab fa-instagram"></i> </li>
-          <li class="footer__item"><i class="fab fa-twitter-square"></i></li>
-        </ul>
-
-        <ul class="footer__items">
-          <li class="footer__item">Copyright © Pearls of Long Bay</li>
-        </ul>
       </div>
     </div>
   </div>

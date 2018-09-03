@@ -19,6 +19,10 @@ body {
   margin: 0 auto;
   max-width: 1800px;
   position: relative;
+  overflow: auto;
+
+}
+.container {
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;

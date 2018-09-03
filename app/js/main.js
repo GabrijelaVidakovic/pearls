@@ -23,7 +23,7 @@ $('#contact').on('submit', function(e) {
 });
 
 $(document).ready(function() {
-  $('.wrapper').scroll( function(){
+  $('.container').scroll( function(){
 
     $('.teaser__number').each(function() {
       var $this = $(this),

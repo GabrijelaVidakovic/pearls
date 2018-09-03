@@ -28,6 +28,9 @@ body {
   margin: 0 auto;
   max-width: 1800px;
   position: relative;
+  overflow: auto; }
+
+.container {
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -635,6 +638,9 @@ header {
   width: 100%;
   height: inherit;
   background-size: cover; }
+  @media only screen and (min-width: 768px) {
+    .header__wrapper {
+      padding-top: 20px; } }
 
 .header__lang {
   display: inline-block;
@@ -692,7 +698,7 @@ header {
   width: 100%;
   height: 100%;
   padding: 60px;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -713,7 +719,11 @@ header {
 .menu {
   margin: 0 auto;
   display: block;
-  width: 50%; }
+  width: 100%;
+  margin-top: 30px; }
+  @media only screen and (min-width: 768px) {
+    .menu {
+      width: 50%; } }
   .menu__item {
     border-bottom: 1px solid #3e4c4d;
     padding: 20px 0; }

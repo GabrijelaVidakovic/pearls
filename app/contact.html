@@ -8,249 +8,251 @@
 
 <body>
   <div class="wrapper">
-    <!--Navigation-->
-    <div id="contact" class="header__wrapper border-img">
-      <nav class="navigation">
-        <i class="fal fa-times fa-2x toggle-btn"></i>
-        <ul class="menu__items menu">
-          <li class="menu__item {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
-          <li class="menu__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('form') }}">Villas</a></li>
-          <li class="menu__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('gallery') }}">What we offer</a></li>
-          <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Contact & About</a></li>
-          <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Blog</a></li>
-        </ul>
-      </nav>
-<!--Header-->
-      <header>
-        <div class="block">
-          <i class="fal fa-bars fa-2x toggle-btn"></i>
-          <div class="header__lang language">
-            <a  href="{{ path(app.request.attributes.get('_route'), {"_locale": "en"}) }}" class="active uppercase {{ app.request.locale == 'en' ? 'active' : '' }}"><span>en</span></a>/
-            <a href="{{ path(app.request.attributes.get('_route'), {"_locale": "es"}) }}" class="uppercase {{ app.request.locale == 'es' ? 'active' : '' }}"><span>es</span></a>
-          </div>
-        </div>
-        <div class="block">
-          <a href="/homepage">
-            <img src="images/logo.png" class="logo" alt="Pearls">
-          </a>
-        </div>
-
-        <div class="block block--right">
-          <p class="telephone"><a href="tel:+649-232-7989">+649-232-7989</a></p>
-          <button type="contact" class="btn btn-icon">
-            <i class="fal fa-hotel icon"></i>book now
-          </button>
-        </div>
-      </header>
-    </div>
-
-<!--Intro-->
-    <section class="intro">
-      <p class="uppercase headline center">How can we help you?</p>
-      <h1 class="center">Contact & about</h1>
-    </section>
-
-    <section class="form wave">
-      <div class="grid">
-        <div class="block block--right large-3 medium-6">
-          <div class="">
-            <div class="contact__items">
-              <p class="contact__item uppercase">Phone:</p>
-              <p class="contact__value">+649-232-7989</p>
-            </div>
-            <div class="contact__items">
-              <p class="contact__item uppercase">E-mail:</p>
-              <p class="contact__value">info@pearlstci.com
-              <span>events@pearlstci.com</span></p>
-            </div>
-            <div class="contact__items">
-              <p class="contact__item uppercase">Address:</p>
-              <p class="contact__value">Long Bay Beach drive 217
-              <span>Turks & Caicos</span></p>
-            </div>
-            <div class="contact__items">
-              <p class="contact__item uppercase">Social:</p>
-              <p class="contact__value"><i class="fab fa-facebook-square"></i>
-              <i class="fab fa-instagram "></i>
-              <i class="fab fa-twitter-square "></i></p>
+    <div class="container">
+      <!--Navigation-->
+      <div id="contact" class="header__wrapper border-img">
+        <nav class="navigation">
+          <i class="fal fa-times fa-2x toggle-btn"></i>
+          <ul class="menu__items menu">
+            <li class="menu__item {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
+            <li class="menu__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('form') }}">Villas</a></li>
+            <li class="menu__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('gallery') }}">What we offer</a></li>
+            <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Contact & About</a></li>
+            <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Blog</a></li>
+          </ul>
+        </nav>
+  <!--Header-->
+        <header>
+          <div class="block">
+            <i class="fal fa-bars fa-2x toggle-btn"></i>
+            <div class="header__lang language">
+              <a  href="{{ path(app.request.attributes.get('_route'), {"_locale": "en"}) }}" class="active uppercase {{ app.request.locale == 'en' ? 'active' : '' }}"><span>en</span></a>/
+              <a href="{{ path(app.request.attributes.get('_route'), {"_locale": "es"}) }}" class="uppercase {{ app.request.locale == 'es' ? 'active' : '' }}"><span>es</span></a>
             </div>
           </div>
-        </div>
+          <div class="block">
+            <a href="/homepage">
+              <img src="images/logo.png" class="logo" alt="Pearls">
+            </a>
+          </div>
 
-        <div class="block large-5 medium-6 ">
-          <form id="contact" name="contact" action="/" method="post">
-            <div class="form__group">
-               <label>Name & Surname</label>
-               <input type="text" name="user" class="form-control form-name" required />
-            </div>
-
-            <div class="form__group">
-               <label>Email</label>
-               <input type="email" name="email" class="form-control form-email" required />
-            </div>
-
-            <div class="form__group">
-               <label for="msg">Message</label>
-               <textarea id="msg" name="user_message" class="form-msg" required></textarea>
-            </div>
-            <button type="submit" class="btn btn--light submit">send
+          <div class="block block--right">
+            <p class="telephone"><a href="tel:+649-232-7989">+649-232-7989</a></p>
+            <button type="contact" class="btn btn-icon">
+              <i class="fal fa-hotel icon"></i>book now
             </button>
-          </form>
+          </div>
+        </header>
+      </div>
+
+  <!--Intro-->
+      <section class="intro">
+        <p class="uppercase headline center">How can we help you?</p>
+        <h1 class="center">Contact & about</h1>
+      </section>
+
+      <section class="form wave">
+        <div class="grid">
+          <div class="block block--right large-3 medium-6">
+            <div class="">
+              <div class="contact__items">
+                <p class="contact__item uppercase">Phone:</p>
+                <p class="contact__value">+649-232-7989</p>
+              </div>
+              <div class="contact__items">
+                <p class="contact__item uppercase">E-mail:</p>
+                <p class="contact__value">info@pearlstci.com
+                <span>events@pearlstci.com</span></p>
+              </div>
+              <div class="contact__items">
+                <p class="contact__item uppercase">Address:</p>
+                <p class="contact__value">Long Bay Beach drive 217
+                <span>Turks & Caicos</span></p>
+              </div>
+              <div class="contact__items">
+                <p class="contact__item uppercase">Social:</p>
+                <p class="contact__value"><i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram "></i>
+                <i class="fab fa-twitter-square "></i></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="block large-5 medium-6 ">
+            <form id="contact" name="contact" action="/" method="post">
+              <div class="form__group">
+                 <label>Name & Surname</label>
+                 <input type="text" name="user" class="form-control form-name" required />
+              </div>
+
+              <div class="form__group">
+                 <label>Email</label>
+                 <input type="email" name="email" class="form-control form-email" required />
+              </div>
+
+              <div class="form__group">
+                 <label for="msg">Message</label>
+                 <textarea id="msg" name="user_message" class="form-msg" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--light submit">send
+              </button>
+            </form>
+          </div>
+        </div>
+        <img src="images/sun.png" class="sun sun--left" alt="About us">
+      </section>
+
+      <!--Map-->
+      <section class="map wave">
+        <p class="uppercase headline center">In the heart of an island</p>
+        <h2 class="center">Location on Map</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13987.51632917218!2d-72.17283730344491!3d21.77083591286262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x894b4f1eb1621de3%3A0x757bf98f009462e!2sLong+Bay+Beach+Club!5e1!3m2!1shr!2shr!4v1535879909480" width="1800" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </section>
+
+    <!--About us-->
+    <section class="about-us wave-bg">
+      <p class="uppercase headline center">Our story</p>
+      <h2 class="center">About us</h2>
+      <div class="grid grid--small">
+        <div class="block gutter-r medium-6 large-5-5">
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare mauris, in facilisis mauris. Morbi laoreet convallis odio, eget placerat urna faucibus convallis. Duis ac nunc sed nunc pharetra vulputate. Donec efficitur justo eu efficitur tempus. Nullam tristique pharetra arcu a mattis. Duis neque nunc, maximus a leo et, blandit sollicitudin lectus. Fusce vel augue nisi. Vivamus sit amet suscipit lorem. Fusce luctus sapien ac ex porta, sed molestie elit viverra. Donec pretium semper arcu.</p>
+
+          <p class="desc">Proin aliquam volutpat tempor. Sed diam turpis, molestie at lobortis non, molestie semper dui. Aenean pharetra aliquet turpis, eget laoreet arcu venenatis ac. Vivamus metus risus, accumsan eget nulla vitae, suscipit tempor metus. Pellentesque nibh risus, sollicitudin quis tristique vitae, maximus in elit. </p>
+
+          <p class="desc">Etiam sed justo consectetur, vestibulum mauris at, posuere felis. Aenean nec ultrices sapien, a dignissim augue. Integer iaculis gravida felis, at consequat sem mollis malesuada. condimentum purus libero, mollis posuere ante pellentesque eleifend. Sed faucibus pulvinar ex eu accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        </div>
+        <div class="block gutter-l medium-6 large-5-5">
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare mauris, in facilisis mauris. Morbi laoreet convallis odio, eget placerat urna faucibus convallis. Duis ac nunc sed nunc pharetra vulputate. Donec efficitur justo eu efficitur tempus. Nullam tristique pharetra arcu a mattis. Duis neque nunc, maximus a leo et, blandit sollicitudin lectus. Fusce vel augue nisi. Vivamus sit amet suscipit lorem. Fusce luctus sapien ac ex porta, sed molestie elit viverra. Donec pretium semper arcu.</p>
+
+          <p class="desc">Proin aliquam volutpat tempor. Sed diam turpis, molestie at lobortis non, molestie semper dui. Aenean pharetra aliquet turpis, eget laoreet arcu venenatis ac. Vivamus metus risus, accumsan eget nulla vitae, suscipit tempor metus. Pellentesque nibh risus, sollicitudin quis tristique vitae, maximus in elit. </p>
+
+          <p class="desc">Etiam sed justo consectetur, vestibulum mauris at, posuere felis. Aenean nec ultrices sapien, a dignissim augue. Integer iaculis gravida felis, at consequat sem mollis malesuada. condimentum purus libero, mollis posuere ante pellentesque eleifend. Sed faucibus pulvinar ex eu accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
         </div>
       </div>
-      <img src="images/sun.png" class="sun sun--left" alt="About us">
     </section>
 
-    <!--Map-->
-    <section class="map wave">
-      <p class="uppercase headline center">In the heart of an island</p>
-      <h2 class="center">Location on Map</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13987.51632917218!2d-72.17283730344491!3d21.77083591286262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x894b4f1eb1621de3%3A0x757bf98f009462e!2sLong+Bay+Beach+Club!5e1!3m2!1shr!2shr!4v1535879909480" width="1800" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </section>
+    <!--Teaser-->
+      <section class="teaser border-img wave">
+        <div class="grid">
+          <div class="block">
+            <p class="uppercase headline left">Just relax</p>
+            <h2 class="block__subtitle left">There are</h2>
+            <p></p>
+          </div>
+          <div class="block center">
+            <h2 class="block__subtitle teaser__number center" data-count="350"></h2>
+            <p class="uppercase headline center">Sunny days in a year</p>
+          </div>
 
-  <!--About us-->
-  <section class="about-us wave-bg">
-    <p class="uppercase headline center">Our story</p>
-    <h2 class="center">About us</h2>
-    <div class="grid grid--small">
-      <div class="block gutter-r medium-6 large-5-5">
-        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare mauris, in facilisis mauris. Morbi laoreet convallis odio, eget placerat urna faucibus convallis. Duis ac nunc sed nunc pharetra vulputate. Donec efficitur justo eu efficitur tempus. Nullam tristique pharetra arcu a mattis. Duis neque nunc, maximus a leo et, blandit sollicitudin lectus. Fusce vel augue nisi. Vivamus sit amet suscipit lorem. Fusce luctus sapien ac ex porta, sed molestie elit viverra. Donec pretium semper arcu.</p>
+          <div class="block center small-none">
+            <h2 class="block__subtitle teaser__number center" data-count="400"></h2>
+            <p class="uppercase headline center">Ft of sandy beach</p>
+          </div>
+          <div class="block center small-none">
+            <h2 class="block__subtitle teaser__number center" data-count="0"></h2>
+            <p class="uppercase headline center">Reasons to worry about</p>
+          </div>
 
-        <p class="desc">Proin aliquam volutpat tempor. Sed diam turpis, molestie at lobortis non, molestie semper dui. Aenean pharetra aliquet turpis, eget laoreet arcu venenatis ac. Vivamus metus risus, accumsan eget nulla vitae, suscipit tempor metus. Pellentesque nibh risus, sollicitudin quis tristique vitae, maximus in elit. </p>
-
-        <p class="desc">Etiam sed justo consectetur, vestibulum mauris at, posuere felis. Aenean nec ultrices sapien, a dignissim augue. Integer iaculis gravida felis, at consequat sem mollis malesuada. condimentum purus libero, mollis posuere ante pellentesque eleifend. Sed faucibus pulvinar ex eu accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-      </div>
-      <div class="block gutter-l medium-6 large-5-5">
-        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare mauris, in facilisis mauris. Morbi laoreet convallis odio, eget placerat urna faucibus convallis. Duis ac nunc sed nunc pharetra vulputate. Donec efficitur justo eu efficitur tempus. Nullam tristique pharetra arcu a mattis. Duis neque nunc, maximus a leo et, blandit sollicitudin lectus. Fusce vel augue nisi. Vivamus sit amet suscipit lorem. Fusce luctus sapien ac ex porta, sed molestie elit viverra. Donec pretium semper arcu.</p>
-
-        <p class="desc">Proin aliquam volutpat tempor. Sed diam turpis, molestie at lobortis non, molestie semper dui. Aenean pharetra aliquet turpis, eget laoreet arcu venenatis ac. Vivamus metus risus, accumsan eget nulla vitae, suscipit tempor metus. Pellentesque nibh risus, sollicitudin quis tristique vitae, maximus in elit. </p>
-
-        <p class="desc">Etiam sed justo consectetur, vestibulum mauris at, posuere felis. Aenean nec ultrices sapien, a dignissim augue. Integer iaculis gravida felis, at consequat sem mollis malesuada. condimentum purus libero, mollis posuere ante pellentesque eleifend. Sed faucibus pulvinar ex eu accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-      </div>
-    </div>
-  </section>
-
-  <!--Teaser-->
-    <section class="teaser border-img wave">
-      <div class="grid">
-        <div class="block">
-          <p class="uppercase headline left">Just relax</p>
-          <h2 class="block__subtitle left">There are</h2>
-          <p></p>
-        </div>
-        <div class="block center">
-          <h2 class="block__subtitle teaser__number center" data-count="350"></h2>
-          <p class="uppercase headline center">Sunny days in a year</p>
-        </div>
-
-        <div class="block center small-none">
-          <h2 class="block__subtitle teaser__number center" data-count="400"></h2>
-          <p class="uppercase headline center">Ft of sandy beach</p>
-        </div>
-        <div class="block center small-none">
-          <h2 class="block__subtitle teaser__number center" data-count="0"></h2>
-          <p class="uppercase headline center">Reasons to worry about</p>
-        </div>
-
-        <div class="block center small-none">
-          <button type="contact" class="btn btn--large"><i class="fal fa-suitcase icon"></i> book now
-          </button>
-        </div>
-      </div>
-    </section>
-
-  <!--Villas-->
-    <section class="villas">
-      <p class="uppercase headline center">For your pleasure</p>
-      <h2 class="center">Villas</h2>
-      <div class="grid grid--full">
-
-        <div class="block large-3 medium-6">
-          <img src="images/west.png" class="border-img" alt="About us">
-          <div class="block__content">
-            <h4>West Pearl House</h4>
-            <ul class="content__items">
-              <li>Acommodates 14 people</li>
-              <li>13 rooms and 8 bathrooms</li>
-              <li>Big pool with natural water</li>
-              <li>Private beach next to the Villa</li>
-            </ul>
-            <button type="contact" class="btn">learn more
+          <div class="block center small-none">
+            <button type="contact" class="btn btn--large"><i class="fal fa-suitcase icon"></i> book now
             </button>
           </div>
         </div>
-        <div class="block large-3 medium-6">
-          <img src="images/west.png" class="border-img" alt="About us">
-          <div class="block__content">
-            <h4>West Pearl House</h4>
-            <ul class="content__items">
-              <li>Acommodates 14 people</li>
-              <li>13 rooms and 8 bathrooms</li>
-              <li>Big pool with natural water</li>
-              <li>Private beach next to the Villa</li>
-            </ul>
-            <button type="contact" class="btn">learn more
-            </button>
+      </section>
+
+    <!--Villas-->
+      <section class="villas">
+        <p class="uppercase headline center">For your pleasure</p>
+        <h2 class="center">Villas</h2>
+        <div class="grid grid--full">
+
+          <div class="block large-3 medium-6">
+            <img src="images/west.png" class="border-img" alt="About us">
+            <div class="block__content">
+              <h4>West Pearl House</h4>
+              <ul class="content__items">
+                <li>Acommodates 14 people</li>
+                <li>13 rooms and 8 bathrooms</li>
+                <li>Big pool with natural water</li>
+                <li>Private beach next to the Villa</li>
+              </ul>
+              <button type="contact" class="btn">learn more
+              </button>
+            </div>
+          </div>
+          <div class="block large-3 medium-6">
+            <img src="images/west.png" class="border-img" alt="About us">
+            <div class="block__content">
+              <h4>West Pearl House</h4>
+              <ul class="content__items">
+                <li>Acommodates 14 people</li>
+                <li>13 rooms and 8 bathrooms</li>
+                <li>Big pool with natural water</li>
+                <li>Private beach next to the Villa</li>
+              </ul>
+              <button type="contact" class="btn">learn more
+              </button>
+            </div>
+          </div>
+          <div class="block large-3 medium-6">
+            <img src="images/west.png" class="border-img" alt="About us">
+            <div class="block__content">
+              <h4>West Pearl House</h4>
+              <ul class="content__items">
+                <li>Acommodates 14 people</li>
+                <li>13 rooms and 8 bathrooms</li>
+                <li>Big pool with natural water</li>
+                <li>Private beach next to the Villa</li>
+              </ul>
+              <button type="contact" class="btn">learn more
+              </button>
+            </div>
           </div>
         </div>
-        <div class="block large-3 medium-6">
-          <img src="images/west.png" class="border-img" alt="About us">
-          <div class="block__content">
-            <h4>West Pearl House</h4>
-            <ul class="content__items">
-              <li>Acommodates 14 people</li>
-              <li>13 rooms and 8 bathrooms</li>
-              <li>Big pool with natural water</li>
-              <li>Private beach next to the Villa</li>
-            </ul>
-            <button type="contact" class="btn">learn more
-            </button>
+      </section>
+
+  <!--Footer -->
+      <section class="footer">
+        <div class="grid grid-medium">
+          <div class="block large-2">
+            <a href="/homepage">
+              <img src="images/logo-footer.png" class="footer__logo" alt="About us">
+            </a>
+            <p class="footer__desc">In the Turks & Caicos Islands, they say magic happens. At The Pearls of Long Bay Estate, you're sure to find yours</p>
           </div>
-        </div>
-      </div>
-    </section>
+          <div class="block block--right large-7">
+            <div class="footer__subject">
+              <p class="uppercase">Villas:</p>
+              <p class="uppercase">Contact:</p>
+              <p class="uppercase">Social:</p>
+            </div>
 
-<!--Footer -->
-    <section class="footer">
-      <div class="grid grid-medium">
-        <div class="block large-2">
-          <a href="/homepage">
-            <img src="images/logo-footer.png" class="footer__logo" alt="About us">
-          </a>
-          <p class="footer__desc">In the Turks & Caicos Islands, they say magic happens. At The Pearls of Long Bay Estate, you're sure to find yours</p>
-        </div>
-        <div class="block block--right large-7">
-          <div class="footer__subject">
-            <p class="uppercase">Villas:</p>
-            <p class="uppercase">Contact:</p>
-            <p class="uppercase">Social:</p>
-          </div>
+            <div class="footer__nav">
+              <ul class="nav__items">
+                <li class="nav__item nav--active {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
+                <li class="nav__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('villas') }}">Villas</a></li>
+                <li class="nav__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('offer') }}">What we offer</a></li>
+                <li class="nav__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('contact') }}">Contact & About</a></li>
+                <li class="nav__item {{ menuStateClass(app.request, 'blog') }}"><a href="{{ path('blog') }}">Blog</a></li>
+              </ul>
 
-          <div class="footer__nav">
-            <ul class="nav__items">
-              <li class="nav__item nav--active {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
-              <li class="nav__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('villas') }}">Villas</a></li>
-              <li class="nav__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('offer') }}">What we offer</a></li>
-              <li class="nav__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('contact') }}">Contact & About</a></li>
-              <li class="nav__item {{ menuStateClass(app.request, 'blog') }}"><a href="{{ path('blog') }}">Blog</a></li>
-            </ul>
+              <ul class="footer__items">
+                <li class="footer__item">
+                  <a href="info@pearlstci.com">info@pearlstci.com</a> </li>
+                <li class="footer__item"><a href="events@pearlstci.com">events@pearlstci.com</a> </li>
+                <li class="footer__item">+649-232-7989</li>
+              </ul>
 
-            <ul class="footer__items">
-              <li class="footer__item">
-                <a href="info@pearlstci.com">info@pearlstci.com</a> </li>
-              <li class="footer__item"><a href="events@pearlstci.com">events@pearlstci.com</a> </li>
-              <li class="footer__item">+649-232-7989</li>
-            </ul>
+              <ul class="footer__items social">
+                <li class="footer__item"><i class="fab fa-facebook-square"></i></li>
+                <li class="footer__item "><i class="fab fa-instagram"></i> </li>
+                <li class="footer__item"><i class="fab fa-twitter-square"></i></li>
+              </ul>
 
-            <ul class="footer__items social">
-              <li class="footer__item"><i class="fab fa-facebook-square"></i></li>
-              <li class="footer__item "><i class="fab fa-instagram"></i> </li>
-              <li class="footer__item"><i class="fab fa-twitter-square"></i></li>
-            </ul>
-
-            <ul class="footer__items">
-              <li class="footer__item">Copyright © Pearls of Long Bay</li>
-            </ul>
+              <ul class="footer__items">
+                <li class="footer__item">Copyright © Pearls of Long Bay</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
