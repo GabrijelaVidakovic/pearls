@@ -1,0 +1,73 @@
+.teaser {
+  background: url(../images/sea.png) no-repeat;
+  display: inline-block;
+  max-height: 150px;
+  height: 150px;
+  padding: 20px 20px  0;
+  @include MQ-range-from($M) {
+    padding: 20px 40px 0;
+    max-height: 300px;
+    height: 300px;
+  }
+
+  * {
+    color: $color-white;
+  }
+
+  .block__subtitle {
+    padding: 0;
+  }
+
+  .block {
+    flex: 1;
+    align-items: center;
+  }
+
+  .grid {
+    align-items: center;
+    height: -webkit-fill-available;
+  }
+
+  .center .headline {
+    width: 33%;
+    margin: 0 auto;
+  }
+  .small-none:last-child {
+    @include MQ-range-from($M) {
+      display: none;
+    }
+    @include MQ-range-from($L) {
+      display: block;
+    }
+  }
+
+  .headline.left,
+  .block__subtitle.left {
+    text-align: center;
+
+    @include MQ-range-from($M) {
+      text-align: left;
+    }
+  }
+}
+
+.blog {
+  margin: 80px auto;
+  @include MQ-range-from($M) {
+    margin: 120px auto;
+  }
+  .block:first-of-type {
+    order: 2;
+
+    @include MQ-range-from($M) {
+      order: 1;
+    }
+  }
+  .block:nth-child(2) {
+    order: 1;
+    margin-bottom: 20px;
+    @include MQ-range-from($M) {
+      order: 2;
+    }
+  }
+}
