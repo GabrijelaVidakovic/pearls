@@ -385,45 +385,56 @@ section {
   .form__group textarea {
     height: 120px; }
 
-.teaser {
+.teaser__img {
   background: url(../images/sea.png) no-repeat;
   display: inline-block;
   max-height: 150px;
   height: 150px;
-  padding: 20px 20px  0; }
+  padding: 20px 20px  0;
+  position: relative; }
   @media only screen and (min-width: 768px) {
-    .teaser {
+    .teaser__img {
       padding: 20px 40px 0;
       max-height: 300px;
       height: 300px; } }
-  .teaser * {
+  .teaser__img * {
     color: #fff; }
-  .teaser .block__subtitle {
+  .teaser__img .block__subtitle {
     padding: 0; }
-  .teaser .block {
+  .teaser__img .block {
     flex: 1;
     align-items: center; }
-  .teaser .grid {
+  .teaser__img .grid {
     align-items: center;
-    height: -webkit-fill-available;
-    height: fill-available;
-    height: -moz-available; }
-  .teaser .center .headline {
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 20px 40px; }
+  .teaser__img .center .headline {
     width: 33%;
     margin: 0 auto; }
   @media only screen and (min-width: 768px) {
-    .teaser .small-none:last-child {
+    .teaser__img .small-none:last-child {
       display: none; } }
   @media only screen and (min-width: 1280px) {
-    .teaser .small-none:last-child {
+    .teaser__img .small-none:last-child {
       display: block; } }
-  .teaser .headline.left,
-  .teaser .block__subtitle.left {
+  .teaser__img .headline.left,
+  .teaser__img .block__subtitle.left {
     text-align: center; }
     @media only screen and (min-width: 768px) {
-      .teaser .headline.left,
-      .teaser .block__subtitle.left {
+      .teaser__img .headline.left,
+      .teaser__img .block__subtitle.left {
         text-align: left; } }
+  .teaser__img.wave:after {
+    position: absolute;
+    bottom: -110px;
+    left: 0;
+    right: 0; }
 
 .blog {
   margin: 80px auto; }
@@ -481,7 +492,7 @@ section {
   @media only screen and (min-width: 1280px) {
     .villas .block:last-child {
       margin-top: 0; } }
-  .villas .block .img {
+  .villas .block img {
     max-width: 768px;
     width: 100%;
     margin: 0 auto;
@@ -585,9 +596,6 @@ iframe {
 
 input:required {
   box-shadow: none; }
-
-.form__group {
-  border: 1px solid red; }
 
 /* ===============================================================================
     LAYOUTS
