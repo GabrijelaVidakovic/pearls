@@ -2,3 +2,11 @@ iframe {
   margin-top: 20px;
   width: 100%;
 }
+
+input:required {
+    box-shadow: none;
+}
+
+
+.form__group {
+border: 1px solid red;}
