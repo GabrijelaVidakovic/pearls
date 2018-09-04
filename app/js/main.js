@@ -12,18 +12,19 @@ open.click(function(){
 //Form validation
 $('#contact').on('submit', function(e) {
 
-  $.ajax({
-      url : url,
-      type: 'POST',
-      data : data,
-      dataType: 'html',
-  }).done(function(response){
-      console.log(response);
-  });
-});
+    $.ajax({
+          url : url,
+          type: 'POST',
+          data : data,
+          dataType: 'html',
+      }).done(function(response){
+          console.log(response);
+      });
+   });
+
+
 
 $(document).ready(function() {
-  $('.container').scroll( function(){
 
     $('.teaser__number').each(function() {
       var $this = $(this),
@@ -52,5 +53,4 @@ $(document).ready(function() {
       }
 
     });
-  });
 });

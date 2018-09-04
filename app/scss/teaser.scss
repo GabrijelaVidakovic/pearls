@@ -26,6 +26,8 @@
   .grid {
     align-items: center;
     height: -webkit-fill-available;
+    height: fill-available;
+    height: -moz-available; 
   }
 
   .center .headline {
