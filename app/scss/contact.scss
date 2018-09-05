@@ -3,6 +3,107 @@ iframe {
   width: 100%;
 }
 
-input:required {
+.contact__items {
+  margin-bottom: 30px;
+
+  .contact__item {
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+    color: $color-grey;
+  }
+
+  .contact__value{
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    color: $color-grey;
+    vertical-align: top;
+
+    i {
+      color: rgb(62,76,77);
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.form {
+  max-width: 1080px;
+  padding: 0 20px;
+
+  @include MQ-range-from($L) {
+    padding: 0;
+  }
+
+  form {
+    margin-top: 30px;
+
+    @include MQ-range-from($M) {
+      margin-top: 0;
+    }
+  }
+
+  .grid {
+    justify-content: flex-end;
+  }
+  .block--right {
+    margin: 20px 0;
+    text-align: right;
+
+    @include MQ-range-from($L) {
+      margin: 20px 80px 0 0;
+    }
+  }
+}
+
+.form__group{
+  position: relative;
+
+  label {
+    position:absolute;
+    top: -10px;
+    left: 10px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    background-color:$color-light-grey;
+    color: $color-grey-mix;
+    font-size: 12px;
+  }
+
+  input, textarea {
+    border: none;
+    width: 100%;
+    background-color: $color-light-grey;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    height: 60px;
+    padding: 20px;
+    border: 1px solid #3d4a4c;
+    margin-bottom: 30px;
+  }
+
+  textarea {
+   height: 140px;
+  }
+}
+
+input:required,
+textarea:required {
     box-shadow: none;
+}
+
+input:focus:required:invalid,
+textarea:focus:required:invalid  {
+  border: 1px solid #bb0000;
+}
+input:focus:required:invalid ~ label,
+textarea:focus:required:invalid ~ label {
+  color: #bb0000;
+}
+
+input:required:valid,
+textarea:required:valid {
+  background-color: #f6f5fb !important;
 }
