@@ -67,12 +67,16 @@ header {
   margin: 0 auto;
   padding-top: 10px;
   width: 100%;
-  height: inherit;
+  // height: inherit;
   background-size: cover;
   @include MQ-range-from($M) {
     padding-top: 20px;
     height: 600px;
   }
+}
+
+#offer__page .header__wrapper {
+  background: url(../images/offer-bg.png) no-repeat center;
 }
 
 .header__lang {

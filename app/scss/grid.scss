@@ -65,6 +65,7 @@ section {
 @include MQ-range-from($M-L) {
   .large-5 {
       flex: 0 0 calc(50%);
+      flex-basis: calc(100% / 2 - 10px);
   }
 }
 @include MQ-range-from($L) {
@@ -74,11 +75,6 @@ section {
   .large-3 {
     flex: 0 0 calc(33.33333%);
     flex-basis: calc(100% / 3 - 20px);
-
-    img {
-      max-width: 530px;
-      max-height: 380px;
-    }
   }
   .large-5 {
     flex: 0 0 calc(50%);

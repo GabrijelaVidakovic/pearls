@@ -71,26 +71,26 @@
         <h2 class="center">Features & Amenities</h2>
         <div class="grid">
           <ul>
-            <li><i class="fas fa-suitcase fa-1x icon"></i>King size bed</li>
-            <li> Ensuite bathroom</li>
-            <li>Ceiling fans</li>
+            <li class="villa__items"><i class="fas fa-suitcase fa-1x icon"></i>King size bed</li>
+            <li class="villa__items"> Ensuite bathroom</li>
+            <li class="villa__items">Ceiling fans</li>
 
           </ul>
           <ul>
-            <li>Alarm system and guard</li>
-            <li> Ceiling fans</li>
-            <li>Telephone</li>
+            <li class="villa__items">Alarm system and guard</li>
+            <li class="villa__items"> Ceiling fans</li>
+            <li class="villa__items"><i class="far fa-phone fa-2x"></i>Telephone</li>
           </ul>
           <ul>
-            <li>Heated pool</li>
-            <li>Parking</li>
-            <li>BBQ Grill</li>
+            <li class="villa__items"><i class="far fa-swimming-pool  fa-2x"></i>Heated pool</li>
+            <li class="villa__items">Parking</li>
+            <li class="villa__items">BBQ Grill</li>
 
           </ul>
           <ul>
-            <li>Car Rental</li>
-            <li> Private Chef</li>
-            <li>Welcome Amenity</li>
+            <li class="villa__items"><i class="far fa-car fa-2x"></i>Car Rental</li>
+            <li class="villa__items"> Private Chef</li>
+            <li class="villa__items">Welcome Amenity</li>
           </ul>
 
         </div>
@@ -201,48 +201,51 @@
       </section>
 
     <!--Footer -->
-    <section class="footer">
-      <div class="grid grid-medium">
-        <div class="block large-2">
-          <img src="images/logo.png" class="footer__logo" alt="About us">
-          <p class="footer__desc">In the Turks & Caicos Islands, they say magic happens. At The Pearls of Long Bay Estate, you're sure to find yours</p>
-        </div>
-        <div class="block block--right large-6">
-          <div class="block--inline footer__subject">
-            <p class="uppercase">Villas:</p>
-            <p class="uppercase">Contact us:</p>
-            <p class="uppercase">Social:</p>
+      <section class="footer">
+        <div class="grid grid-medium">
+          <div class="block large-2">
+            <a href="/homepage">
+              <img src="images/logo-footer.png" class="footer__logo" alt="About us">
+            </a>
+            <p class="footer__desc">In the Turks & Caicos Islands, they say magic happens. At The Pearls of Long Bay Estate, you're sure to find yours</p>
           </div>
+          <div class="block block--right large-7">
+            <div class="footer__subject">
+              <p class="uppercase">Villas:</p>
+              <p class="uppercase">Contact:</p>
+              <p class="uppercase">Social:</p>
+            </div>
 
-        <div class="block--inline">
-          <ul class="nav__items">
-            <li class="nav__item {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
-            <li class="nav__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('villas') }}">Villas</a></li>
-            <li class="nav__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('offer') }}">What we offer</a></li>
-            <li class="nav__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('contact') }}">Contact & About</a></li>
-            <li class="nav__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('blog') }}">Blog</a></li>
-          </ul>
+            <div class="footer__nav">
+              <ul class="nav__items">
+                <li class="nav__item nav--active {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
+                <li class="nav__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('villas') }}">Villas</a></li>
+                <li class="nav__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('offer') }}">What we offer</a></li>
+                <li class="nav__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('contact') }}">Contact & About</a></li>
+                <li class="nav__item {{ menuStateClass(app.request, 'blog') }}"><a href="{{ path('blog') }}">Blog</a></li>
+              </ul>
 
-          <ul class="footer__items">
-            <li class="footer__item">info@pearlstci.com </li>
-            <li class="footer__item ">events@pearlstci.com </li>
-            <li class="footer__item">+649-232-7989</li>
-          </ul>
+              <ul class="footer__items">
+                <li class="footer__item">
+                  <a href="info@pearlstci.com">info@pearlstci.com</a> </li>
+                <li class="footer__item"><a href="events@pearlstci.com">events@pearlstci.com</a> </li>
+                <li class="footer__item">+649-232-7989</li>
+              </ul>
 
-          <ul class="footer__items">
-            <li class="footer__item"><i class="fab fa-facebook-square"></i></li>
-            <li class="footer__item "><i class="fab fa-instagram"></i> </li>
-            <li class="footer__item"><i class="fab fa-twitter-square"></i></li>
-          </ul>
+              <ul class="footer__items social">
+                <li class="footer__item"><i class="fab fa-facebook-square"></i></li>
+                <li class="footer__item "><i class="fab fa-instagram"></i> </li>
+                <li class="footer__item"><i class="fab fa-twitter-square"></i></li>
+              </ul>
 
-          <ul class="footer__items">
-            <li class="footer__item">Copyright © Pearls of Long Bay</li>
-          </ul>
+              <ul class="footer__items">
+                <li class="footer__item">Copyright © Pearls of Long Bay</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 <!--build:js js/main.min.js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

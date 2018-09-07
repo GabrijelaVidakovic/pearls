@@ -46,7 +46,10 @@ h1, h2, h3, h4, h5, h6 {
       text-align: left; } }
 
 h1 {
-  font-size: 60px; }
+  font-size: 36px; }
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 60px; } }
 
 h2 {
   font-size: 28px;
@@ -56,7 +59,10 @@ h2 {
       font-size: 48px; } }
 
 h3 {
-  font-size: 36px; }
+  font-size: 32px; }
+  @media only screen and (min-width: 768px) {
+    h3 {
+      font-size: 36px; } }
 
 h2::after, h3::after {
   content: '';
@@ -260,7 +266,8 @@ section {
 
 @media only screen and (min-width: 1024px) {
   .large-5 {
-    flex: 0 0 calc(50%); } }
+    flex: 0 0 calc(50%);
+    flex-basis: calc(100% / 2 - 10px); } }
 
 @media only screen and (min-width: 1280px) {
   .large-4 {
@@ -268,9 +275,6 @@ section {
   .large-3 {
     flex: 0 0 calc(33.33333%);
     flex-basis: calc(100% / 3 - 20px); }
-    .large-3 img {
-      max-width: 530px;
-      max-height: 380px; }
   .large-5 {
     flex: 0 0 calc(50%);
     flex-basis: calc(100% / 2 - 10px); }
@@ -459,11 +463,11 @@ h2.center:after {
     padding-top: 50%; }
   .offer h2 {
     padding: 0 0 50px 0; }
-  .offer h4 {
+  .offer h4, .offer h3 {
     margin-bottom: 10px; }
   .offer img {
-    max-width: 900px;
-    max-height: 450px;
+    max-width: 640px;
+    max-height: 320px;
     width: 100%;
     height: auto; }
   .offer .block {
@@ -509,6 +513,43 @@ h2.center:after {
     @media only screen and (min-width: 1024px) {
       .offer .block__content--fourth {
         bottom: 70px; } }
+  .offer .btn {
+    margin-top: 30px; }
+
+#offer__page .offer {
+  margin: 100px auto; }
+  #offer__page .offer .block {
+    margin-bottom: 50px;
+    position: relative;
+    margin-top: 0; }
+    @media only screen and (min-width: 768px) {
+      #offer__page .offer .block {
+        margin-bottom: 250px; }
+        #offer__page .offer .block:last-child {
+          margin-bottom: 150px; } }
+    @media only screen and (min-width: 1280px) {
+      #offer__page .offer .block:last-child {
+        margin-bottom: 250px; } }
+    @media only screen and (min-width: 768px) {
+      #offer__page .offer .block img {
+        margin: 0 auto; } }
+  #offer__page .offer h3:after {
+    display: none; }
+  #offer__page .offer .sun {
+    top: 25%; }
+  #offer__page .offer .block__content {
+    margin: rem(-60) auto; }
+    @media only screen and (min-width: 768px) {
+      #offer__page .offer .block__content {
+        left: 0;
+        right: 0;
+        margin: 0 auto; } }
+    @media only screen and (min-width: 768px) {
+      #offer__page .offer .block__content--first, #offer__page .offer .block__content--second, #offer__page .offer .block__content--third, #offer__page .offer .block__content--fourth {
+        left: 0;
+        right: 0;
+        top: calc(100% - 70px);
+        bottom: inherit; } }
 
 .villa__desc {
   margin: 40px 0 70px; }
@@ -531,6 +572,15 @@ h2.center:after {
   .zoom__img img {
     -webkit-transition: 0.6s ease;
     transition: 0.6s ease; }
+
+.villa__items {
+  font-size: 20px;
+  color: #3e4c4d;
+  margin-bottom: 20px; }
+  .villa__items i {
+    margin-right: 20px;
+    color: #aeb6bc;
+    vertical-align: middle; }
 
 iframe {
   margin-top: 20px;
@@ -675,12 +725,14 @@ header {
   margin: 0 auto;
   padding-top: 10px;
   width: 100%;
-  height: inherit;
   background-size: cover; }
   @media only screen and (min-width: 768px) {
     .header__wrapper {
       padding-top: 20px;
       height: 600px; } }
+
+#offer__page .header__wrapper {
+  background: url(../images/offer-bg.png) no-repeat center; }
 
 .header__lang {
   display: inline-block;

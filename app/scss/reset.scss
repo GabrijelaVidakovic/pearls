@@ -41,7 +41,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 36px;
+  @include MQ-range-from($M) {
+    font-size: 60px;
+  }
 }
 
 h2 {
@@ -54,7 +57,11 @@ h2 {
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 32px;
+
+  @include MQ-range-from($M) {
+    font-size: 36px;
+  }
 }
 
 h2, h3 {
