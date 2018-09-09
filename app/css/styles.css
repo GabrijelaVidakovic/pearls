@@ -1,3 +1,6 @@
+.grey {
+  color: #aeb6bc; }
+
 /* ------------------------
 	Bounds
 ------------------------ */
@@ -46,8 +49,12 @@ h1, h2, h3, h4, h5, h6 {
       text-align: left; } }
 
 h1 {
-  font-size: 36px; }
+  font-size: 36px;
+  line-height: 1.1; }
   @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 46px; } }
+  @media only screen and (min-width: 1280px) {
     h1 {
       font-size: 60px; } }
 
@@ -55,6 +62,9 @@ h2 {
   font-size: 28px;
   padding: 0 0 20px; }
   @media only screen and (min-width: 768px) {
+    h2 {
+      font-size: 30px; } }
+  @media only screen and (min-width: 1280px) {
     h2 {
       font-size: 48px; } }
 
@@ -196,6 +206,9 @@ input:-webkit-autofill:active {
     cursor: pointer;
     box-shadow: inset 0 0 0 99999px rgba(25, 25, 25, 0.3); }
 
+.btn--dark {
+  background-color: #000; }
+
 .btn-img {
   vertical-align: bottom;
   margin-right: rem(15); }
@@ -206,6 +219,10 @@ input:-webkit-autofill:active {
 
 .buttons.inline .btn {
   display: inline-block; }
+
+.btn--center {
+  margin: 0 auto;
+  display: block; }
 
 .fa, .fab, .fal, .far, .fas {
   line-height: 0 !important; }
@@ -232,6 +249,10 @@ section {
   .grid--small {
     margin: 0 auto;
     max-width: 1080px;
+    justify-content: space-between; }
+  .grid--extra-small {
+    margin: 0 auto;
+    max-width: 850px;
     justify-content: space-between; }
   .grid--full {
     width: 100%;
@@ -359,7 +380,10 @@ section {
     right: 0;
     top: 0;
     bottom: 0;
-    padding: 20px 40px; }
+    padding: 20px; }
+    @media only screen and (min-width: 768px) {
+      .teaser__img .grid {
+        padding: 20px 40px; } }
   .teaser__img .center .headline {
     width: 33%;
     margin: 0 auto; }
@@ -433,10 +457,10 @@ section {
   @media only screen and (min-width: 768px) {
     .villas .block {
       margin-bottom: 0; }
-      .villas .block:last-child {
+      .villas .block:nth-child(3) {
         margin-top: 30px; } }
   @media only screen and (min-width: 1280px) {
-    .villas .block:last-child {
+    .villas .block:nth-child(3) {
       margin-top: 0; } }
   .villas .block img {
     max-width: 768px;
@@ -552,16 +576,18 @@ h2.center:after {
         bottom: inherit; } }
 
 .villa__desc {
-  margin: 40px 0 70px; }
+  margin: 40px 0 0; }
   .villa__desc .villa__value {
     font-weight: 700; }
 
 .intro__desc {
+  margin-top: 50px;
   padding: 0;
   font-size: 18px; }
   @media only screen and (min-width: 1024px) {
     .intro__desc {
-      padding: 0 100px; } }
+      padding: 0 100px;
+      margin-top: 70px; } }
 
 .zoom__img:hover img {
   -webkit-transform: scale(1.2);
@@ -576,11 +602,15 @@ h2.center:after {
 .villa__items {
   font-size: 20px;
   color: #3e4c4d;
-  margin-bottom: 20px; }
+  margin-bottom: 35px; }
   .villa__items i {
     margin-right: 20px;
     color: #aeb6bc;
-    vertical-align: middle; }
+    vertical-align: middle;
+    max-width: 40px; }
+
+.offer__list {
+  margin: 50px auto; }
 
 iframe {
   margin-top: 20px;
@@ -664,6 +694,48 @@ textarea:focus:required:invalid ~ label {
 input:required:valid,
 textarea:required:valid {
   background-color: #f6f5fb !important; }
+
+.post__text {
+  margin-bottom: 40px;
+  overflow: hidden; }
+
+.post__title {
+  margin-bottom: 40px; }
+
+.post a {
+  color: #328bf5;
+  text-decoration: underline; }
+
+.post__image {
+  max-width: 530px;
+  max-height: 360px;
+  width: 100%;
+  margin: 0 auto 40px 0; }
+  @media only screen and (min-width: 768px) {
+    .post__image {
+      width: 60%;
+      margin: 0 auto; } }
+  .post__image--left {
+    float: inherit; }
+    @media only screen and (min-width: 768px) {
+      .post__image--left {
+        float: left;
+        margin-right: 40px;
+        margin-left: 0; } }
+    @media only screen and (min-width: 1280px) {
+      .post__image--left {
+        margin-left: -200px; } }
+  .post__image--right {
+    float: right;
+    margin-left: 40px;
+    margin-right: 0; }
+    @media only screen and (min-width: 1280px) {
+      .post__image--right {
+        margin-right: -200px; } }
+
+@media only screen and (min-width: 1280px) {
+  .previous__post .large-5-5 {
+    align-self: flex-start; } }
 
 /* ===============================================================================
     LAYOUTS
@@ -769,6 +841,9 @@ header {
     @media only screen and (min-width: 768px) {
       .intro::after {
         margin: 50px auto 0; } }
+  .intro h1 {
+    margin: 0 auto;
+    width: 80%; }
   .intro .intro__text {
     font-size: 18px;
     font-family: 'Playfair Display', serif;

@@ -42,7 +42,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 36px;
+  line-height: 1.1;
   @include MQ-range-from($M) {
+    font-size: 46px;
+  }
+  @include MQ-range-from($L) {
     font-size: 60px;
   }
 }
@@ -52,6 +56,9 @@ h2 {
   padding: 0 0 20px;
 
   @include MQ-range-from($M) {
+    font-size: 30px;
+  }
+  @include MQ-range-from($L) {
     font-size: 48px;
   }
 }

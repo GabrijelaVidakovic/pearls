@@ -78,6 +78,10 @@ input:-webkit-autofill:active {
   }
 }
 
+.btn--dark {
+  background-color: $color-black
+}
+
 .btn-img {
   vertical-align: bottom;
   margin-right: rem(15);
@@ -92,6 +96,10 @@ input:-webkit-autofill:active {
   display: inline-block;
 }
 
+.btn--center {
+  margin: 0 auto;
+  display: block;
+}
 //icons
 .fa, .fab, .fal, .far, .fas {
   line-height: 0!important;

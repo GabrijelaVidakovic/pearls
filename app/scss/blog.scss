@@ -1,0 +1,56 @@
+.post {
+  &__text {
+    margin-bottom: 40px;
+    overflow: hidden;
+  }
+  &__title {
+    margin-bottom: 40px;
+  }
+  a {
+    color: $color-blue;
+    text-decoration: underline;
+
+  }
+
+  &__image {
+    max-width: 530px;
+    max-height: 360px;
+    width: 100%;
+    margin: 0 auto 40px 0;
+
+    @include MQ-range-from($M) {
+      width: 60%;
+      margin: 0 auto;
+    }
+
+
+    &--left {
+      float: inherit;
+
+      @include MQ-range-from($M) {
+        float: left;
+        margin-right: 40px;
+        margin-left: 0;
+      }
+      @include MQ-range-from($L) {
+        margin-left: -200px;;
+      }
+    }
+    &--right {
+      float: right;
+      margin-left: 40px;
+      margin-right: 0;
+      @include MQ-range-from($L) {
+        margin-right: -200px;;
+      }
+    }
+  }
+}
+
+.previous__post {
+  @include MQ-range-from($L) {
+    .large-5-5 {
+      align-self: flex-start;
+    }
+  }
+}

@@ -21,6 +21,13 @@ section {
     justify-content: space-between;
   }
 
+  &--extra-small {
+    margin: 0 auto;
+    max-width: 850px;
+    justify-content: space-between;
+  }
+
+
   &--full {
     width: 100%;
     max-width: 1640px;
