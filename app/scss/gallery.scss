@@ -1,0 +1,68 @@
+.grid-container {
+  width: 100%;
+}
+
+.grid-item, .grid-sizer {
+  width: 100%;
+  float: left;
+  position: relative;
+  padding: 0;
+  pointer-events: none;
+
+  @include MQ-range-from($M) {
+    width: 25%;
+    cursor: zoom-in;
+    pointer-events: visible;
+    padding: 0 20px 20px 0;
+  }
+}
+
+.grid-item img {
+  display: block;
+  float: left;
+  width: 100%;
+  height: auto;
+
+  @include MQ-range-from($M) {
+    max-height: 280px;
+  }
+}
+
+button.is-checked {
+  color: $color-black;
+}
+
+.visible_item{
+   display:none;
+}
+
+/* clear fix */
+.grid-container:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.gallery {
+  .btn--center {
+    margin-top: 70px;
+  }
+}
+
+.grid-item.selected {
+  width: 100%;
+  pointer-events: none;
+
+  @include MQ-range-from($M) {
+    width: 50%;
+    cursor: zoom-out;
+    pointer-events: visible;
+  }
+
+   img {
+    width: 100%;
+    max-width: 880px;
+    height: auto;
+    max-height: 580px;
+  }
+}

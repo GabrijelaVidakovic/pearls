@@ -96,6 +96,35 @@ input:-webkit-autofill:active {
   display: inline-block;
 }
 
+.button-group {
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+}
+
+.btn-filter {
+  text-transform: inherit;
+  border: none;
+  background-color: transparent;
+  font-size: 26px;
+  outline: none;
+  cursor: pointer;
+  color: $color-middle-grey;
+
+  &:hover {
+    color: $color-turquoise;
+  }
+
+  &:after {
+    content: '~';
+    display: inline-block;
+    color: $color-turquoise;
+    margin-left: 20px;
+  }
+  &:last-child:after {
+    content: none;
+  }
+}
 .btn--center {
   margin: 0 auto;
   display: block;
