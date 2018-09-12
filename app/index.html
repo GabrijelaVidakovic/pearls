@@ -1,293 +1,316 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Pearls of Long Bay</title>
-<!--  CSS -->
-  <link rel="stylesheet" href="css/styles.css">
-<!--  Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
-<!--  Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/images/site.webmanifest">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Pearls of Long Bay</title>
+  <!--  CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  <!--  Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
+  <!--  Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+  </head>
 
-<body>
-  <div class="container">
-    <div class="wrapper">
-      <!--Navigation-->
-      <div class="header__wrapper--full border-img">
-        <nav class="navigation">
-          <i class="fal fa-times fa-2x toggle-btn"></i>
-          <ul class="menu__items menu">
-            <li class="menu__item menu--active {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
-            <li class="menu__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('form') }}">Villas</a></li>
-            <li class="menu__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('gallery') }}">What we offer</a></li>
-            <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Contact & About</a></li>
-            <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Blog</a></li>
-          </ul>
-        </nav>
-  <!--Header-->
-        <header>
-          <div class="block">
-            <i class="fal fa-bars fa-2x toggle-btn"></i>
-            <div class="header__lang language">
-              <a  href="{{ path(app.request.attributes.get('_route'), {"_locale": "en"}) }}" class="active uppercase {{ app.request.locale == 'en' ? 'active' : '' }}"><span>en</span></a> /
-              <a href="{{ path(app.request.attributes.get('_route'), {"_locale": "es"}) }}" class="uppercase {{ app.request.locale == 'es' ? 'active' : '' }}"><span>es</span></a>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <!--Navigation-->
+        <div class="header__wrapper--full border-img">
+          <nav class="navigation">
+            <i class="fal fa-times fa-2x toggle-btn"></i>
+            <ul class="menu__items menu">
+              <li class="menu__item menu--active {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
+              <li class="menu__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('form') }}">Villas</a></li>
+              <li class="menu__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('gallery') }}">What we offer</a></li>
+              <li class="menu__item {{ menuStateClass(app.request, '') }}"><a href="{{ path('adoption') }}">Contact & About</a></li>
+              <li class="menu__item {{ menuStateClass(app.request, '') }}"><a href="{{ path('adoption') }}">Blog</a></li>
+            </ul>
+          </nav>
+    <!--Header-->
+          <header>
+            <div class="block">
+              <i class="fal fa-bars fa-2x toggle-btn"></i>
+              <div class="header__lang language">
+                <a  href="{{ path(app.request.attributes.get('_route'), {"_locale": "en"}) }}" class="active uppercase {{ app.request.locale == 'en' ? 'active' : '' }}"><span>en</span></a> /
+                <a href="{{ path(app.request.attributes.get('_route'), {"_locale": "es"}) }}" class="uppercase {{ app.request.locale == 'es' ? 'active' : '' }}"><span>es</span></a>
+              </div>
+            </div>
+            <div class="block">
+              <a href="/homepage">
+                <img src="images/logo.png" class="logo" alt="Pearls">
+              </a>
+            </div>
+
+            <div class="block block--right">
+              <p class="telephone"><a href="tel:+649-232-7989">+649-232-7989</a></p>
+              <a href="/">
+                <button class="btn btn-icon">
+                <i class="fal fa-hotel icon"></i>book now
+                </button>
+              </a>
+            </div>
+          </header>
+        </div>
+
+    <!--Intro-->
+        <section class="intro">
+          <p class="intro__text">In the Turks & Caicos Islands, they say magic happens.</p>
+          <p class="intro__text">At The Pearls of Long Bay Estate, you’re sure to find yours.</p>
+        </section>
+
+      <!--About us-->
+        <section class="about-us wave">
+          <div class="grid">
+            <div class="block medium-6 large-4">
+              <p class="uppercase headline">Our story</p>
+              <h2>About us</h2>
+              <p class="desc">Located along Provo’s stunning Long Bay Beach, The Pearls of Long Bay Estate’s three expansive homes offer guests uninterrupted views of the turquoise waters spanning the Caicos Banks, with 450ft of beach front and private beach decks at each villa.</p>
+
+              <p class="desc">The two 8 bed, 8.5 bath and one 7 bed, 7.5 bath beachfront villas marry contemporary design with Caribbean barefoot luxury, each spanning 12,000 square feet of sophisticated indoor and outdoor living. The Estate offers guests access to five star amenities including championship tennis court, state of the art gym, Turkish sauna, steam room and massage pavilion.</p>
+              <a href="/">
+                <button class="btn btn--light">learn more
+                </button>
+              </a>
+            </div>
+            <div class="block small-none medium-6 large-6">
+              <img src="images/aboutus.png" class="border-img" alt="About us">
             </div>
           </div>
-          <div class="block">
-            <a href="/homepage">
-              <img src="images/logo.png" class="logo" alt="Pearls">
+        </section>
+
+      <!--Villas-->
+        <section class="villas wave">
+          <img src="images/sun.png" class="sun sun--left" alt="Sun">
+          <p class="uppercase headline center">For your pleasure</p>
+          <h2 class="center">Villas</h2>
+          <div class="grid grid--full">
+            <div class="block large-3 medium-6">
+            <div class="zoom__img">
+              <img src="images/west.png" class="border-img" alt="West villa">
+            </div>
+              <div class="block__content">
+                <h4>West Pearl House</h4>
+                <ul class="content__items">
+                  <li>Acommodates 14 people</li>
+                  <li>13 rooms and 8 bathrooms</li>
+                  <li>Big pool with natural water</li>
+                  <li>Private beach next to the Villa</li>
+                </ul>
+                <a href="/">
+                  <button class="btn btn--light">learn more
+                  </button>
+                </a>
+                <a href="/">
+                  <button type=" inline" class="btn"><i class="fal fa-suitcase icon"></i> book now
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="block large-3 medium-6">
+              <div class="zoom__img">
+                <img src="images/west.png" class="border-img" alt="About us">
+              </div>
+              <div class="block__content">
+                <h4>Lidia House</h4>
+                <ul class="content__items">
+                  <li>Acommodates 17 people</li>
+                  <li>14 rooms and 9 bathrooms</li>
+                  <li>Big pools with natural water</li>
+                  <li>Private beach next to the Villa</li>
+                </ul>
+                <a href="/">
+                  <button class="btn btn--light">learn more
+                  </button>
+                </a>
+                <a href="/">
+                  <button class="btn"><i class="fal fa-suitcase icon"></i> book now
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="block large-3 medium-6">
+              <div class="zoom__img">
+                <img src="images/west.png" class="border-img" alt="About us">
+              </div>
+              <div class="block__content">
+                <h4>East Pearl House</h4>
+                <ul class="content__items">
+                  <li>Acommodates 14 people</li>
+                  <li>13 rooms and 8 bathrooms</li>
+                  <li>Big pool with natural water</li>
+                  <li>Private beach next to the Villa</li>
+                </ul>
+                <a href="/">
+                  <button class="btn btn--light">learn more
+                </button>
+                </a>
+                <a href="/">
+                  <button class="btn"><i class="fal fa-suitcase icon"></i> book now
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+    <!--Offer-->
+        <section class="offer">
+          <div class="grid">
+            <div class="block large-5">
+              <p class="uppercase headline">Our other service</p>
+              <h2>What we offer</h2>
+              <div class="zoom__img">
+                <img src="images/indoor.png" class="border-img" alt="About us">
+              </div>
+              <div class="block__content block__content--first">
+                <h4>SPA & Massages</h4>
+                <p>Relax and unwind in the spa which features a private al fresco massage area for two, Turkish steam bath and sauna.</p>
+              </div>
+            </div>
+            <div class="block large-5">
+              <div class="zoom__img">
+                <img src="images/outdoor.png" class="border-img" alt="About us">
+              </div>
+              <div class="block__content block__content--second">
+                <h4>Fitness</h4>
+                <p>We present you state of the art, air-conditioned 1,000 square foot private gym.</p>
+              </div>
+            </div>
+            <div class="block large-5">
+              <div class="zoom__img">
+                <img src="images/cinema.png" class="border-img" alt="About us">
+              </div>
+              <div class="block__content block__content--third">
+                <h4>Events</h4>
+                <p>Orgnanize event eatures a private al fresco massage area for two, Turkish steam bath and sauna.</p>
+              </div>
+            </div>
+            <div class="block large-5 block--top">
+              <div class="zoom__img">
+                <img src="images/tennis.png" class="border-img" alt="About us">
+              </div>
+              <div class="block__content block__content--fourth">
+                <h4>Tennis & Basketball</h4>
+                <p>Enjoy a game of tennis with family or arrange private lessons on the Estate’s ASBA Certified championship court.</p>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <!--Teaser-->
+        <section class="teaser wave">
+          <div class="teaser__img border-img">
+            <div class="grid">
+              <div class="block">
+                <p class="uppercase headline left">Just relax</p>
+                <h2 class="block__subtitle left">There are</h2>
+                <p></p>
+              </div>
+              <div class="block center">
+                <h2 class="block__subtitle teaser__number center" data-count="350"></h2>
+                <p class="uppercase headline center">Sunny days in a year</p>
+              </div>
+
+              <div class="block center small-none">
+                <h2 class="block__subtitle teaser__number center" data-count="400"></h2>
+                <p class="uppercase headline center">Ft of sandy beach</p>
+              </div>
+              <div class="block center small-none">
+                <h2 class="block__subtitle teaser__number center" data-count="0"></h2>
+                <p class="uppercase headline center">Reasons to worry about</p>
+              </div>
+
+              <div class="block center small-none">
+                <a href="/">
+                  <button class="btn btn--large"><i class="fal fa-suitcase icon"></i> book now</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--Blog-->
+        <section class="blog">
+          <img src="images/sun.png" class="sun" alt="Sun">
+          <div class="grid">
+            <div class="block medium-6 large-6">
+              <img src="images/blog.png" class="border-img" alt="Blog">
+            </div>
+          <div class="block small-12 medium-6 large-4">
+            <p class="uppercase headline">Latest from our blog</p>
+            <h3>Perfect place and time for holiday & relaxations</h3>
+            <p class="desc">Or for relaxation, you can book a couples massage, or simply enjoy a Turkish Steam bath or sauna in the shared spa area, which also offers an open air shower and bathroom.</p>
+
+            <p class="desc">If you opt to include a private chef and daily maid service, they will endeavor to make your stay as simple and carefree as possible. For your personal use, or for staff should you opt to have them..</p>
+            <a href="/">
+               <button class="btn btn--light">read more</button>
+               </a>
             </a>
           </div>
-
-          <div class="block block--right">
-            <p class="telephone"><a href="tel:+649-232-7989">+649-232-7989</a></p>
-            <button type="contact" class="btn btn-icon">
-              <i class="fal fa-hotel icon"></i>book now
-            </button>
           </div>
-        </header>
-      </div>
+        </section>
 
-  <!--Intro-->
-      <section class="intro">
-        <p class="intro__text">In the Turks & Caicos Islands, they say magic happens.</p>
-        <p class="intro__text">At The Pearls of Long Bay Estate, you’re sure to find yours.</p>
+      <!--Footer -->
+        <section class="footer">
+          <div class="grid grid-medium">
+            <div class="block large-2">
+              <a href="/homepage">
+                <img src="images/logo-footer.png" class="footer__logo" alt="Logo">
+              </a>
+              <p class="footer__desc">In the Turks & Caicos Islands, they say magic happens. At The Pearls of Long Bay Estate, you're sure to find yours</p>
+            </div>
+            <div class="block block--right large-7">
+              <div class="footer__subject">
+                <p class="uppercase">Villas:</p>
+                <p class="uppercase">Contact:</p>
+                <p class="uppercase">Social:</p>
+              </div>
+
+              <div class="footer__nav">
+                <ul class="nav__items">
+                  <li class="nav__item nav--active {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
+                  <li class="nav__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('villas') }}">Villas</a></li>
+                  <li class="nav__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('offer') }}">What we offer</a></li>
+                  <li class="nav__item {{ menuStateClass(app.request, '') }}"><a href="{{ path('') }}">Contact & About</a></li>
+                  <li class="nav__item {{ menuStateClass(app.request, 'blog') }}"><a href="{{ path('blog') }}">Blog</a></li>
+                </ul>
+
+                <ul class="footer__items">
+                  <li class="footer__item">
+                    <a href="info@pearlstci.com">info@pearlstci.com</a> </li>
+                  <li class="footer__item"><a href="events@pearlstci.com">events@pearlstci.com</a> </li>
+                  <li class="footer__item">+649-232-7989</li>
+                </ul>
+
+                <ul class="footer__items social">
+                  <li class="footer__item"><i class="fab fa-facebook-square"></i></li>
+                  <li class="footer__item "><i class="fab fa-instagram"></i> </li>
+                  <li class="footer__item"><i class="fab fa-twitter-square"></i></li>
+                </ul>
+
+                <ul class="footer__items">
+                  <li class="footer__item">Copyright © Pearls of Long Bay</li>
+                </ul>
+              </div>
+            </div>
+          </div>
       </section>
-
-  <!--About us-->
-    <section class="about-us wave">
-      <div class="grid">
-        <div class="block medium-6 large-4">
-          <p class="uppercase headline">Our story</p>
-          <h2>About us</h2>
-          <p class="desc">Located along Provo’s stunning Long Bay Beach, The Pearls of Long Bay Estate’s three expansive homes offer guests uninterrupted views of the turquoise waters spanning the Caicos Banks, with 450ft of beach front and private beach decks at each villa.</p>
-
-          <p class="desc">The two 8 bed, 8.5 bath and one 7 bed, 7.5 bath beachfront villas marry contemporary design with Caribbean barefoot luxury, each spanning 12,000 square feet of sophisticated indoor and outdoor living. The Estate offers guests access to five star amenities including championship tennis court, state of the art gym, Turkish sauna, steam room and massage pavilion.</p>
-          <button type="contact" class="btn btn--light">learn more
-          </button>
-        </div>
-        <div class="block small-none medium-6 large-6">
-          <img src="images/aboutus.png" class="border-img" alt="About us"></a>
-        </div>
-      </div>
-    </section>
-
-    <!--Villas-->
-      <section class="villas wave">
-        <img src="images/sun.png" class="sun sun--left" alt="About us">
-        <p class="uppercase headline center">For your pleasure</p>
-        <h2 class="center">Villas</h2>
-        <div class="grid grid--full">
-          <div class="block large-3 medium-6">
-          <div class="zoom__img">
-            <img src="images/west.png" class="border-img" alt="About us">
-          </div>
-            <div class="block__content">
-              <h4>West Pearl House</h4>
-              <ul class="content__items">
-                <li>Acommodates 14 people</li>
-                <li>13 rooms and 8 bathrooms</li>
-                <li>Big pool with natural water</li>
-                <li>Private beach next to the Villa</li>
-              </ul>
-              <button type="contact" class="btn btn--light">learn more
-              </button>
-              <button type="contact inline" class="btn"><i class="fal fa-suitcase icon"></i> book now
-              </button>
-            </div>
-          </div>
-          <div class="block large-3 medium-6">
-            <div class="zoom__img">
-              <img src="images/west.png" class="border-img" alt="About us">
-            </div>
-            <div class="block__content">
-              <h4>Lidia House</h4>
-              <ul class="content__items">
-                <li>Acommodates 17 people</li>
-                <li>14 rooms and 9 bathrooms</li>
-                <li>Big pools with natural water</li>
-                <li>Private beach next to the Villa</li>
-              </ul>
-              <button type="contact" class="btn btn--light">learn more
-              </button>
-              <button type="contact" class="btn"><i class="fal fa-suitcase icon"></i> book now
-              </button>
-            </div>
-          </div>
-          <div class="block large-3 medium-6">
-            <div class="zoom__img">
-              <img src="images/west.png" class="border-img" alt="About us">
-            </div>
-            <div class="block__content">
-              <h4>East Pearl House</h4>
-              <ul class="content__items">
-                <li>Acommodates 14 people</li>
-                <li>13 rooms and 8 bathrooms</li>
-                <li>Big pool with natural water</li>
-                <li>Private beach next to the Villa</li>
-              </ul>
-              <button type="contact" class="btn btn--light">learn more
-              </button>
-              <button type="contact" class="btn"><i class="fal fa-suitcase icon"></i> book now
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-  <!--Offer-->
-      <section class="offer">
-        <div class="grid">
-          <div class="block large-5">
-            <p class="uppercase headline">Our other service</p>
-            <h2>What we offer</h2>
-            <div class="zoom__img">
-              <img src="images/indoor.png" class="border-img" alt="About us">
-            </div>
-            <div class="block__content block__content--first">
-              <h4>SPA & Massages</h4>
-              <p>Relax and unwind in the spa which features a private al fresco massage area for two, Turkish steam bath and sauna.</p>
-            </div>
-          </div>
-          <div class="block large-5">
-            <div class="zoom__img">
-              <img src="images/outdoor.png" class="border-img" alt="About us">
-            </div>
-            <div class="block__content block__content--second">
-              <h4>Fitness</h4>
-              <p>We present you state of the art, air-conditioned 1,000 square foot private gym.</p>
-            </div>
-          </div>
-          <div class="block large-5">
-            <div class="zoom__img">
-              <img src="images/cinema.png" class="border-img" alt="About us">
-            </div>
-            <div class="block__content block__content--third">
-              <h4>Events</h4>
-              <p>Orgnanize event eatures a private al fresco massage area for two, Turkish steam bath and sauna.</p>
-            </div>
-          </div>
-          <div class="block large-5 block--top">
-            <div class="zoom__img">
-              <img src="images/tennis.png" class="border-img" alt="About us">
-            </div>
-            <div class="block__content block__content--fourth">
-              <h4>Tennis & Basketball</h4>
-              <p>Enjoy a game of tennis with family or arrange private lessons on the Estate’s ASBA Certified championship court.</p>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!--Teaser-->
-      <section class="teaser wave">
-        <div class="teaser__img border-img">
-          <div class="grid">
-            <div class="block">
-              <p class="uppercase headline left">Just relax</p>
-              <h2 class="block__subtitle left">There are</h2>
-              <p></p>
-            </div>
-            <div class="block center">
-              <h2 class="block__subtitle teaser__number center" data-count="350"></h2>
-              <p class="uppercase headline center">Sunny days in a year</p>
-            </div>
-
-            <div class="block center small-none">
-              <h2 class="block__subtitle teaser__number center" data-count="400"></h2>
-              <p class="uppercase headline center">Ft of sandy beach</p>
-            </div>
-            <div class="block center small-none">
-              <h2 class="block__subtitle teaser__number center" data-count="0"></h2>
-              <p class="uppercase headline center">Reasons to worry about</p>
-            </div>
-
-            <div class="block center small-none">
-              <button type="contact" class="btn btn--large"><i class="fal fa-suitcase icon"></i> book now
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    <!--Blog-->
-    <section class="blog">
-      <img src="images/sun.png" class="sun" alt="About us">
-      <div class="grid">
-        <div class="block medium-6 large-6">
-          <img src="images/blog.png" class="border-img" alt="About us"></a>
-        </div>
-      <div class="block small-12 medium-6 large-4">
-        <p class="uppercase headline">Latest from our blog</p>
-        <h3>Perfect place and time for holiday & relaxations</h3>
-        <p class="desc">Or for relaxation, you can book a couples massage, or simply enjoy a Turkish Steam bath or sauna in the shared spa area, which also offers an open air shower and bathroom.</p>
-
-        <p class="desc">If you opt to include a private chef and daily maid service, they will endeavor to make your stay as simple and carefree as possible. For your personal use, or for staff should you opt to have them..</p>
-        <button type="contact" class="btn btn--light">read more
-        </button>
-      </div>
-      </div>
-    </section>
-
-  <!--Footer -->
-    <section class="footer">
-      <div class="grid grid-medium">
-        <div class="block large-2">
-          <a href="/homepage">
-            <img src="images/logo-footer.png" class="footer__logo" alt="About us">
-          </a>
-          <p class="footer__desc">In the Turks & Caicos Islands, they say magic happens. At The Pearls of Long Bay Estate, you're sure to find yours</p>
-        </div>
-        <div class="block block--right large-7">
-          <div class="footer__subject">
-            <p class="uppercase">Villas:</p>
-            <p class="uppercase">Contact:</p>
-            <p class="uppercase">Social:</p>
-          </div>
-
-          <div class="footer__nav">
-            <ul class="nav__items">
-              <li class="nav__item nav--active {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
-              <li class="nav__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('villas') }}">Villas</a></li>
-              <li class="nav__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('offer') }}">What we offer</a></li>
-              <li class="nav__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('contact') }}">Contact & About</a></li>
-              <li class="nav__item {{ menuStateClass(app.request, 'blog') }}"><a href="{{ path('blog') }}">Blog</a></li>
-            </ul>
-
-            <ul class="footer__items">
-              <li class="footer__item">
-                <a href="info@pearlstci.com">info@pearlstci.com</a> </li>
-              <li class="footer__item"><a href="events@pearlstci.com">events@pearlstci.com</a> </li>
-              <li class="footer__item">+649-232-7989</li>
-            </ul>
-
-            <ul class="footer__items social">
-              <li class="footer__item"><i class="fab fa-facebook-square"></i></li>
-              <li class="footer__item "><i class="fab fa-instagram"></i> </li>
-              <li class="footer__item"><i class="fab fa-twitter-square"></i></li>
-            </ul>
-
-            <ul class="footer__items">
-              <li class="footer__item">Copyright © Pearls of Long Bay</li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+  </div>
 
-<!--build:js js/main.min.js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="js/main.js"></script>
-<!-- endbuild -->
+  <!--build:js js/main.min.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="path/to/jquery.fitvids.js"></script>
+  <!-- endbuild -->
 
-</body>
+  </body>
+</html>
