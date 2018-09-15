@@ -20,100 +20,101 @@
   </head>
 
   <body>
-    <div id="offer__page" class="container">
-      <div class="wrapper">
-        <!--Navigation-->
-        <div class="header__wrapper border-img">
-          <nav class="navigation">
-            <i class="fal fa-times fa-2x toggle-btn"></i>
-            <ul class="menu__items menu">
-              <li class="menu__item menu--active {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
-              <li class="menu__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('form') }}">Villas</a></li>
-              <li class="menu__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('gallery') }}">What we offer</a></li>
-              <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Contact & About</a></li>
-              <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Blog</a></li>
-            </ul>
-          </nav>
+    <div class="container">
+    <!--Navigation-->
+    <!-- <div class="header__wrapper border-img"> -->
+      <nav class="navigation">
+        <i class="fal fa-times fa-2x toggle-btn"></i>
+        <ul class="menu__items menu">
+          <li class="menu__item menu--active {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
+          <li class="menu__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('form') }}">Villas</a></li>
+          <li class="menu__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('gallery') }}">What we offer</a></li>
+          <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Contact & About</a></li>
+          <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Blog</a></li>
+        </ul>
+      </nav>
     <!--Header-->
-          <header>
-            <div class="block">
-              <i class="fal fa-bars fa-2x toggle-btn"></i>
-              <div class="header__lang language">
-                <a  href="{{ path(app.request.attributes.get('_route'), {"_locale": "en"}) }}" class="active uppercase {{ app.request.locale == 'en' ? 'active' : '' }}"><span>en</span></a> /
-                <a href="{{ path(app.request.attributes.get('_route'), {"_locale": "es"}) }}" class="uppercase {{ app.request.locale == 'es' ? 'active' : '' }}"><span>es</span></a>
-              </div>
-            </div>
-            <div class="block">
-              <a href="/homepage">
-                <img src="images/logo.png" class="logo" alt="Pearls">
-              </a>
-            </div>
-
-            <div class="block block--right">
-              <p class="telephone"><a href="tel:+649-232-7989">+649-232-7989</a></p>
-              <a href="" class="btn btn-icon">
-                  <i class="fal fa-hotel icon"></i>book now
-              </a>
-            </div>
-          </header>
+      <header>
+        <div class="grid--header">
+        <div class="block">
+          <i class="fal fa-bars fa-2x toggle-btn"></i>
+          <div class="header__lang language">
+            <a  href="{{ path(app.request.attributes.get('_route'), {"_locale": "en"}) }}" class="active uppercase {{ app.request.locale == 'en' ? 'active' : '' }}"><span>en</span></a> /
+            <a href="{{ path(app.request.attributes.get('_route'), {"_locale": "es"}) }}" class="uppercase {{ app.request.locale == 'es' ? 'active' : '' }}"><span>es</span></a>
+          </div>
+        </div>
+        <div class="block">
+          <a href="/homepage">
+            <img src="images/logo.png" class="logo" alt="Pearls">
+          </a>
         </div>
 
-    <!--Intro-->
+        <div class="block block--right">
+          <p class="telephone"><a href="tel:+649-232-7989">+649-232-7989</a></p>
+          <a href="" class="btn btn-icon">
+              <i class="fal fa-hotel icon"></i>book now
+          </a>
+        </div>
+        </div>
+        <img src="/images/offer-bg.png" alt="" class="header__image border-img">
+      </header>
+
+      <div  id="offer__page" class="wrapper">
+      <!--Intro-->
         <section class="intro">
           <p class="uppercase headline center">enhance your experience</p>
           <h1 class="center">What we offer</h1>
         </section>
 
-        <!--Offer-->
-            <section class="offer">
-              <img src="images/sun.png" class="sun sun--left" alt="About us">
-
-              <div class="grid">
-                <div class="block large-5">
-                  <div class="zoom__img">
-                    <img src="images/indoor.png" class="border-img" alt="About us">
-                  </div>
-                  <div class="block__content block__content--first">
-                    <h3>SPA & Massages</h3>
-                    <p>Relax and unwind in the spa which features a private al fresco massage area for two, Turkish steam bath and sauna.</p>
-                    <a href="" class="btn btn--light">learn more
-                    </a>
-                  </div>
+      <!--Offer-->
+          <section class="offer">
+            <img src="images/sun.png" class="sun sun--left" alt="About us">
+            <div class="grid">
+              <div class="block large-5">
+                <div class="zoom__img">
+                  <img src="images/indoor.png" class="border-img" alt="About us">
                 </div>
-                <div class="block large-5">
-                  <div class="zoom__img">
-                    <img src="images/outdoor.png" class="border-img" alt="About us">
-                  </div>
-                  <div class="block__content block__content--second">
-                    <h3>Fitness</h3>
-                    <p>We present you state of the art, air-conditioned 1,000 square foot private gym.</p>
-                    <a href="" class="btn btn--light">learn more
-                    </a>
-                  </div>
-                </div>
-                <div class="block large-5">
-                  <div class="zoom__img">
-                    <img src="images/cinema.png" class="border-img" alt="About us">
-                  </div>
-                  <div class="block__content block__content--third">
-                    <h3>Events</h3>
-                    <p>Orgnanize event eatures a private al fresco massage area for two, Turkish steam bath and sauna.</p>
-                    <a href="" class="btn btn--light">learn more
-                    </a>
-                  </div>
-                </div>
-                <div class="block large-5">
-                  <div class="zoom__img">
-                    <img src="images/tennis.png" class="border-img" alt="About us">
-                  </div>
-                  <div class="block__content block__content--fourth">
-                    <h3>Tennis & Basketball</h3>
-                    <p>Enjoy a game of tennis with family or arrange private lessons on the Estate’s ASBA Certified championship court.</p>
-                    <a href="" class="btn btn--light">learn more
-                    </a>
-                  </div>
+                <div class="block__content block__content--first">
+                  <h3>SPA & Massages</h3>
+                  <p>Relax and unwind in the spa which features a private al fresco massage area for two, Turkish steam bath and sauna.</p>
+                  <a href="" class="btn btn--light">learn more
+                  </a>
                 </div>
               </div>
+              <div class="block large-5">
+                <div class="zoom__img">
+                  <img src="images/outdoor.png" class="border-img" alt="About us">
+                </div>
+                <div class="block__content block__content--second">
+                  <h3>Fitness</h3>
+                  <p>We present you state of the art, air-conditioned 1,000 square foot private gym.</p>
+                  <a href="" class="btn btn--light">learn more
+                  </a>
+                </div>
+              </div>
+              <div class="block large-5">
+                <div class="zoom__img">
+                  <img src="images/cinema.png" class="border-img" alt="About us">
+                </div>
+                <div class="block__content block__content--third">
+                  <h3>Events</h3>
+                  <p>Orgnanize event eatures a private al fresco massage area for two, Turkish steam bath and sauna.</p>
+                  <a href="" class="btn btn--light">learn more
+                  </a>
+                </div>
+              </div>
+              <div class="block large-5">
+                <div class="zoom__img">
+                  <img src="images/tennis.png" class="border-img" alt="About us">
+                </div>
+                <div class="block__content block__content--fourth">
+                  <h3>Tennis & Basketball</h3>
+                  <p>Enjoy a game of tennis with family or arrange private lessons on the Estate’s ASBA Certified championship court.</p>
+                  <a href="" class="btn btn--light">learn more
+                  </a>
+                </div>
+              </div>
+            </div>
           </section>
 
           <!--Teaser-->
@@ -249,11 +250,13 @@
         </div>
       </section>
     </div>
-  </div>
 
   <!--build:js js/main.min.js -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
   <script src="js/main.js"></script>
+  <script src="js/jquery.fitvids.js"></script>
   <!-- endbuild -->
 
   </body>

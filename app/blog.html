@@ -21,186 +21,189 @@
 
   <body>
     <div id="offer__page" class="container">
-      <div class="wrapper">
-        <!--Navigation-->
-        <div class="header__wrapper border-img">
-          <nav class="navigation">
-            <i class="fal fa-times fa-2x toggle-btn"></i>
-            <ul class="menu__items menu">
-              <li class="menu__item menu--active {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
-              <li class="menu__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('form') }}">Villas</a></li>
-              <li class="menu__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('gallery') }}">What we offer</a></li>
-              <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Contact & About</a></li>
-              <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Blog</a></li>
-            </ul>
-          </nav>
+    <!--Navigation-->
+      <!-- <div class="header__wrapper border-img"> -->
+      <nav class="navigation">
+        <i class="fal fa-times fa-2x toggle-btn"></i>
+        <ul class="menu__items menu">
+          <li class="menu__item menu--active {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
+          <li class="menu__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('form') }}">Villas</a></li>
+          <li class="menu__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('gallery') }}">What we offer</a></li>
+          <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Contact & About</a></li>
+          <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Blog</a></li>
+        </ul>
+      </nav>
+
     <!--Header-->
-          <header>
-            <div class="block">
-              <i class="fal fa-bars fa-2x toggle-btn"></i>
-              <div class="header__lang language">
-                <a  href="{{ path(app.request.attributes.get('_route'), {"_locale": "en"}) }}" class="active uppercase {{ app.request.locale == 'en' ? 'active' : '' }}"><span>en</span></a> /
-                <a href="{{ path(app.request.attributes.get('_route'), {"_locale": "es"}) }}" class="uppercase {{ app.request.locale == 'es' ? 'active' : '' }}"><span>es</span></a>
-              </div>
+      <header>
+        <div class="grid--header">
+          <div class="block">
+            <i class="fal fa-bars fa-2x toggle-btn"></i>
+            <div class="header__lang language">
+              <a  href="{{ path(app.request.attributes.get('_route'), {"_locale": "en"}) }}" class="active uppercase {{ app.request.locale == 'en' ? 'active' : '' }}"><span>en</span></a> /
+              <a href="{{ path(app.request.attributes.get('_route'), {"_locale": "es"}) }}" class="uppercase {{ app.request.locale == 'es' ? 'active' : '' }}"><span>es</span></a>
             </div>
-            <div class="block">
-              <a href="/homepage">
-                <img src="images/logo.png" class="logo" alt="Pearls">
-              </a>
-            </div>
-
-            <div class="block block--right">
-              <p class="telephone"><a href="tel:+649-232-7989">+649-232-7989</a></p>
-              <a href="" class="btn btn-icon">
-                <i class="fal fa-hotel icon"></i>book now
-              </a>
-            </div>
-          </header>
-        </div>
-
-    <!--Intro-->
-        <section class="intro">
-          <p class="uppercase headline center">12.12.2018</p>
-          <h1 class="center">Perfect place and time for holiday & relaxation</h1>
-          <p class="intro__desc">Located along Provo’s stunning Long Bay Beach, The Pearls of Long Bay Estate’s three expansive homes offer guests uninterrupted views of the turquoise waters spanning the Caicos Banks, with 450ft of beach front and private beach decks at each villa. The two 8 bed, 8.5 bath and one 7 bed, 7.5 bath beachfront villas marry contemporary design with Caribbean barefoot luxury, each spanning 12,000 square feet of sophisticated indoor and outdoor living. The Estate offers guests access to five star amenities including championship tennis court, state of the art gym, Turkish sauna, steam room and massage pavilion.</p>
-        </section>
-
-      <!--Last post-->
-        <section class="post wave">
-          <img src="images/sun.png" class="sun sun--left" alt="About us">
-
-          <div class="grid--extra-small">
-              <p class="post__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare mauris, in facilisis mauris. Morbi laoreet convallis odio, eget placerat urna faucibus convallis. Duis ac nunc sed nunc pharetra vulputate. Donec efficitur justo eu efficitur tempus. Nullam tristique pharetra arcu a mattis. Duis neque nunc, maximus a leo et, blandit sollicitudin lectus. Fusce vel augue nisi. Vivamus sit amet suscipit lorem. Fusce luctus sapien ac ex porta, sed molestie elit viverra. Donec pretium semper arcu.</p>
-              <p class="post__text">Proin aliquam volutpat tempor. Sed diam turpis, molestie at lobortis non, molestie semper dui. Aenean pharetra aliquet turpis, eget laoreet arcu venenatis ac. Vivamus metus risus, accumsan eget nulla vitae, suscipit tempor metus. Pellentesque nibh risus, sollicitudin quis tristique vitae, maximus in elit. Etiam sed justo consectetur, vestibulum mauris at, posuere felis. Aenean nec ultrices sapien, a dignissim augue. Integer iaculis gravida felis, at consequat sem mollis malesuada. Aenean nec lacus id velit faucibus suscipit. Nunc consectetur nec orci at elementum. Vivamus ullamcorper, tortor blandit iaculis rutrum, tellus lacus commodo risus, a ullamcorper orci justo et nisi. Sed vel nisi ac est commodo rhoncus et id ante. Integer rutrum consequat nibh nec laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-
-              <h4 class="post__title">Something big is about to happen</h4>
-              <p class="post__text">Suspendisse potenti. Vivamus condimentum libero vitae semper gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper ac arcu quis fermentum. Donec pellentesque massa eget efficitur vehicula. Morbi nulla magna, pretium quis tincidunt eget, vestibulum nec nisi. Nulla a elit eget mi scelerisque cursus. In molestie nisl sit amet aliquet luctus. Etiam feugiat ex non lectus iaculis lobortis. Integer sollicitudin maximus mi vitae ullamcorper. Maecenas mi augue, tempor in finibus id, accumsan et nisl. Etiam eget feugiat odio.</p>
-
-              <p class="post__text">Pellentesque ex justo, tempor eu magna vitae, placerat molestie nisl. Sed feugiat neque ante, eget congue justo varius ut. Phasellus nec magna eros. Maecenas vehicula lacinia lorem, quis efficitur justo mattis non. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse condimentum purus libero, mollis posuere ante pellentesque eleifend. Sed faucibus pulvinar ex eu accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-
-              <p class="post__text">Proin non accumsan elit. Morbi in vehicula libero. <a href=""> Etiam id vehicula ipsum</a>. Vestibulum mollis, ligula at fringilla porttitor, nunc erat faucibus nibh, eu condimentum urna nibh ut elit. Sed porta magna quam, ut hendrerit libero interdum semper. Nunc gravida elit vitae semper viverra. Suspendisse potenti. Ut in convallis tortor, sed blandit est. Etiam sed finibus sem.</p>
-
-              <img src="images/aboutus.png" class="border-img post__image post__image--left" alt="About us">
-
-              <p class="post__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare mauris, in facilisis mauris. Morbi laoreet convallis odio, eget placerat urna faucibus convallis. Duis ac nunc sed nunc pharetra vulputate. Donec efficitur justo eu efficitur tempus. Nullam tristique pharetra arcu a mattis. Duis neque nunc, maximus a leo et, blandit sollicitudin lectus. Fusce vel augue nisi. Vivamus sit amet suscipit lorem. Fusce luctus sapien ac ex porta, sed molestie elit viverra. Donec pretium semper arcu.</p>
-
-              <p class="post__text">Proin aliquam volutpat tempor. Sed diam turpis, molestie at lobortis non, molestie semper dui. Aenean pharetra aliquet turpis, eget laoreet arcu venenatis ac. Vivamus metus risus, accumsan eget nulla vitae, suscipit tempor metus. Pellentesque nibh risus, sollicitudin quis tristique vitae, maximus in elit. Etiam sed justo consectetur, vestibulum mauris at, posuere felis.</p>
-
-              <h4 class="post__title">In a paradise long lost</h4>
-              <p class="post__text">Aenean nec lacus id velit faucibus suscipit. Nunc consectetur nec orci at elementum. Vivamus ullamcorper, tortor blandit iaculis rutrum, tellus lacus commodo risus, a ullamcorper orci justo et nisi. Sed vel nisi ac est commodo rhoncus et id ante. Integer rutrum consequat nibh nec laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-
-              <p class="post__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare mauris, in facilisis mauris. Morbi laoreet convallis odio, eget placerat urna faucibus convallis. Duis ac nunc sed nunc pharetra vulputate. Donec efficitur justo eu efficitur tempus. Nullam tristique pharetra arcu a mattis. Duis neque nunc, maximus a leo et, blandit sollicitudin lectus. Fusce vel augue nisi. Vivamus sit amet suscipit lorem. Fusce luctus sapien ac ex porta, sed molestie elit viverra. Donec pretium semper arcu. Proin aliquam volutpat tempor. Sed diam turpis, molestie at lobortis non, molestie semper dui. Aenean pharetra aliquet turpis.</p>
-
-              <p class="post__text">Pellentesque nibh risus, sollicitudin quis tristique vitae, maximus in elit. Etiam sed justo consectetur, vestibulum mauris at, posuere felis. Aenean nec ultrices sapien, a dignissim augue. Integer iaculis gravida felis, at consequat sem mollis malesuada. Aenean nec lacus id velit faucibus suscipit. Nunc consectetur nec orci at elementum. Vivamus ullamcorper, tortor blandit iaculis rutrum, tellus lacus commodo risus, a ullamcorper orci justo et nisi. Sed vel nisi ac est commodo rhoncus et id ante. Integer rutrum consequat nibh nec laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
           </div>
-        </section>
+          <div class="block">
+            <a href="/homepage">
+              <img src="images/logo.png" class="logo" alt="Pearls">
+            </a>
+          </div>
 
-        <!--Previous post-->
-          <section class="previous__post about-us wave">
-            <div class="grid">
-              <div class="block small-none medium-6 large-5-5">
-                <img src="images/aboutus.png" class="border-img" alt="About us">
-              </div>
-              <div class="block medium-6 large-5-5">
-                <p class="uppercase headline">Previous post</p>
-                <h2>The flower that blooms in adversity is the rarest</h2>
-                <p class="desc">Or for relaxation, you can book a couples massage, or simply enjoy a Turkish Steam bath or sauna in the shared spa area, which also offers an open air shower and bathroom.
-                </p>
+          <div class="block block--right">
+            <p class="telephone"><a href="tel:+649-232-7989">+649-232-7989</a></p>
+            <a href="" class="btn btn-icon">
+              <i class="fal fa-hotel icon"></i>book now
+            </a>
+          </div>
+        </div>
+        <img src="/images/contact/contact-bg.png" alt="" class="header__image border-img">
+      </header>
 
-                <p class="desc">If you opt to include a private chef and daily maid service, they will endeavor to make your stay as simple and carefree as possible. For your personal use, or for staff should you opt to have them...</p>
-                <a href="" class="btn btn--light">read more
-                </a>
-              </div>
+    <div class="wrapper">
+    <!--Intro-->
+      <section class="intro">
+        <p class="uppercase headline center">12.12.2018</p>
+        <h1 class="center">Perfect place and time for holiday & relaxation</h1>
+        <p class="intro__desc">Located along Provo’s stunning Long Bay Beach, The Pearls of Long Bay Estate’s three expansive homes offer guests uninterrupted views of the turquoise waters spanning the Caicos Banks, with 450ft of beach front and private beach decks at each villa. The two 8 bed, 8.5 bath and one 7 bed, 7.5 bath beachfront villas marry contemporary design with Caribbean barefoot luxury, each spanning 12,000 square feet of sophisticated indoor and outdoor living. The Estate offers guests access to five star amenities including championship tennis court, state of the art gym, Turkish sauna, steam room and massage pavilion.</p>
+      </section>
 
+    <!--Last post-->
+      <section class="post wave">
+        <img src="images/sun.png" class="sun sun--left" alt="About us">
+
+        <div class="grid--extra-small">
+            <p class="post__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare mauris, in facilisis mauris. Morbi laoreet convallis odio, eget placerat urna faucibus convallis. Duis ac nunc sed nunc pharetra vulputate. Donec efficitur justo eu efficitur tempus. Nullam tristique pharetra arcu a mattis. Duis neque nunc, maximus a leo et, blandit sollicitudin lectus. Fusce vel augue nisi. Vivamus sit amet suscipit lorem. Fusce luctus sapien ac ex porta, sed molestie elit viverra. Donec pretium semper arcu.</p>
+            <p class="post__text">Proin aliquam volutpat tempor. Sed diam turpis, molestie at lobortis non, molestie semper dui. Aenean pharetra aliquet turpis, eget laoreet arcu venenatis ac. Vivamus metus risus, accumsan eget nulla vitae, suscipit tempor metus. Pellentesque nibh risus, sollicitudin quis tristique vitae, maximus in elit. Etiam sed justo consectetur, vestibulum mauris at, posuere felis. Aenean nec ultrices sapien, a dignissim augue. Integer iaculis gravida felis, at consequat sem mollis malesuada. Aenean nec lacus id velit faucibus suscipit. Nunc consectetur nec orci at elementum. Vivamus ullamcorper, tortor blandit iaculis rutrum, tellus lacus commodo risus, a ullamcorper orci justo et nisi. Sed vel nisi ac est commodo rhoncus et id ante. Integer rutrum consequat nibh nec laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+
+            <h4 class="post__title">Something big is about to happen</h4>
+            <p class="post__text">Suspendisse potenti. Vivamus condimentum libero vitae semper gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper ac arcu quis fermentum. Donec pellentesque massa eget efficitur vehicula. Morbi nulla magna, pretium quis tincidunt eget, vestibulum nec nisi. Nulla a elit eget mi scelerisque cursus. In molestie nisl sit amet aliquet luctus. Etiam feugiat ex non lectus iaculis lobortis. Integer sollicitudin maximus mi vitae ullamcorper. Maecenas mi augue, tempor in finibus id, accumsan et nisl. Etiam eget feugiat odio.</p>
+
+            <p class="post__text">Pellentesque ex justo, tempor eu magna vitae, placerat molestie nisl. Sed feugiat neque ante, eget congue justo varius ut. Phasellus nec magna eros. Maecenas vehicula lacinia lorem, quis efficitur justo mattis non. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse condimentum purus libero, mollis posuere ante pellentesque eleifend. Sed faucibus pulvinar ex eu accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+            <p class="post__text">Proin non accumsan elit. Morbi in vehicula libero. <a href=""> Etiam id vehicula ipsum</a>. Vestibulum mollis, ligula at fringilla porttitor, nunc erat faucibus nibh, eu condimentum urna nibh ut elit. Sed porta magna quam, ut hendrerit libero interdum semper. Nunc gravida elit vitae semper viverra. Suspendisse potenti. Ut in convallis tortor, sed blandit est. Etiam sed finibus sem.</p>
+
+            <img src="images/aboutus.png" class="border-img post__image post__image--left" alt="About us">
+
+            <p class="post__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare mauris, in facilisis mauris. Morbi laoreet convallis odio, eget placerat urna faucibus convallis. Duis ac nunc sed nunc pharetra vulputate. Donec efficitur justo eu efficitur tempus. Nullam tristique pharetra arcu a mattis. Duis neque nunc, maximus a leo et, blandit sollicitudin lectus. Fusce vel augue nisi. Vivamus sit amet suscipit lorem. Fusce luctus sapien ac ex porta, sed molestie elit viverra. Donec pretium semper arcu.</p>
+
+            <p class="post__text">Proin aliquam volutpat tempor. Sed diam turpis, molestie at lobortis non, molestie semper dui. Aenean pharetra aliquet turpis, eget laoreet arcu venenatis ac. Vivamus metus risus, accumsan eget nulla vitae, suscipit tempor metus. Pellentesque nibh risus, sollicitudin quis tristique vitae, maximus in elit. Etiam sed justo consectetur, vestibulum mauris at, posuere felis.</p>
+
+            <h4 class="post__title">In a paradise long lost</h4>
+            <p class="post__text">Aenean nec lacus id velit faucibus suscipit. Nunc consectetur nec orci at elementum. Vivamus ullamcorper, tortor blandit iaculis rutrum, tellus lacus commodo risus, a ullamcorper orci justo et nisi. Sed vel nisi ac est commodo rhoncus et id ante. Integer rutrum consequat nibh nec laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+
+            <p class="post__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget ornare mauris, in facilisis mauris. Morbi laoreet convallis odio, eget placerat urna faucibus convallis. Duis ac nunc sed nunc pharetra vulputate. Donec efficitur justo eu efficitur tempus. Nullam tristique pharetra arcu a mattis. Duis neque nunc, maximus a leo et, blandit sollicitudin lectus. Fusce vel augue nisi. Vivamus sit amet suscipit lorem. Fusce luctus sapien ac ex porta, sed molestie elit viverra. Donec pretium semper arcu. Proin aliquam volutpat tempor. Sed diam turpis, molestie at lobortis non, molestie semper dui. Aenean pharetra aliquet turpis.</p>
+
+            <p class="post__text">Pellentesque nibh risus, sollicitudin quis tristique vitae, maximus in elit. Etiam sed justo consectetur, vestibulum mauris at, posuere felis. Aenean nec ultrices sapien, a dignissim augue. Integer iaculis gravida felis, at consequat sem mollis malesuada. Aenean nec lacus id velit faucibus suscipit. Nunc consectetur nec orci at elementum. Vivamus ullamcorper, tortor blandit iaculis rutrum, tellus lacus commodo risus, a ullamcorper orci justo et nisi. Sed vel nisi ac est commodo rhoncus et id ante. Integer rutrum consequat nibh nec laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+        </div>
+      </section>
+
+    <!--Previous post-->
+      <section class="previous__post about-us wave">
+        <div class="grid">
+          <div class="block small-none medium-6 large-5-5">
+            <img src="images/aboutus.png" class="border-img" alt="About us">
+          </div>
+          <div class="block medium-6 large-5-5">
+            <p class="uppercase headline">Previous post</p>
+            <h2>The flower that blooms in adversity is the rarest</h2>
+            <p class="desc">Or for relaxation, you can book a couples massage, or simply enjoy a Turkish Steam bath or sauna in the shared spa area, which also offers an open air shower and bathroom.
+            </p>
+
+            <p class="desc">If you opt to include a private chef and daily maid service, they will endeavor to make your stay as simple and carefree as possible. For your personal use, or for staff should you opt to have them...</p>
+            <a href="" class="btn btn--light">read more
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+    <!--Teaser-->
+      <section class="teaser wave">
+        <div class="teaser__img border-img">
+          <div class="grid">
+            <div class="block">
+              <p class="uppercase headline left">Just relax</p>
+              <h2 class="block__subtitle left">There are</h2>
+              <p></p>
             </div>
-          </section>
+            <div class="block center">
+              <h2 class="block__subtitle teaser__number center" data-count="350"></h2>
+              <p class="uppercase headline center">Sunny days in a year</p>
+            </div>
 
-          <!--Teaser-->
-            <section class="teaser wave">
-              <div class="teaser__img border-img">
-                <div class="grid">
-                  <div class="block">
-                    <p class="uppercase headline left">Just relax</p>
-                    <h2 class="block__subtitle left">There are</h2>
-                    <p></p>
-                  </div>
-                  <div class="block center">
-                    <h2 class="block__subtitle teaser__number center" data-count="350"></h2>
-                    <p class="uppercase headline center">Sunny days in a year</p>
-                  </div>
+            <div class="block center small-none">
+              <h2 class="block__subtitle teaser__number center" data-count="400"></h2>
+              <p class="uppercase headline center">Ft of sandy beach</p>
+            </div>
+            <div class="block center small-none">
+              <h2 class="block__subtitle teaser__number center" data-count="0"></h2>
+              <p class="uppercase headline center">Reasons to worry about</p>
+            </div>
 
-                  <div class="block center small-none">
-                    <h2 class="block__subtitle teaser__number center" data-count="400"></h2>
-                    <p class="uppercase headline center">Ft of sandy beach</p>
-                  </div>
-                  <div class="block center small-none">
-                    <h2 class="block__subtitle teaser__number center" data-count="0"></h2>
-                    <p class="uppercase headline center">Reasons to worry about</p>
-                  </div>
+            <div class="block center small-none">
+              <a href="" class="btn btn--dark btn--large"><i class="fal fa-suitcase icon"></i> book now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                  <div class="block center small-none">
-                    <a href="" class="btn btn--dark btn--large"><i class="fal fa-suitcase icon"></i> book now
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-      <!--Villas-->
-        <section class="villas">
-          <p class="uppercase headline center">For your pleasure</p>
-          <h2 class="center">Villas</h2>
-          <div class="grid grid--full">
-            <div class="block large-3 medium-6">
+    <!--Villas-->
+      <section class="villas">
+        <p class="uppercase headline center">For your pleasure</p>
+        <h2 class="center">Villas</h2>
+        <div class="grid grid--full">
+          <div class="block large-3 medium-6">
+          <div class="zoom__img">
+            <img src="images/west.png" class="border-img" alt="About us">
+          </div>
+            <div class="block__content">
+              <h4>West Pearl House</h4>
+              <ul class="content__items">
+                <li>Acommodates 14 people</li>
+                <li>13 rooms and 8 bathrooms</li>
+                <li>Big pool with natural water</li>
+                <li>Private beach next to the Villa</li>
+              </ul>
+              <a href="" class="btn">learn more
+              </a>
+            </div>
+          </div>
+          <div class="block large-3 medium-6">
             <div class="zoom__img">
               <img src="images/west.png" class="border-img" alt="About us">
             </div>
-              <div class="block__content">
-                <h4>West Pearl House</h4>
-                <ul class="content__items">
-                  <li>Acommodates 14 people</li>
-                  <li>13 rooms and 8 bathrooms</li>
-                  <li>Big pool with natural water</li>
-                  <li>Private beach next to the Villa</li>
-                </ul>
-                <a href="" class="btn">learn more
-                </a>
-              </div>
-            </div>
-            <div class="block large-3 medium-6">
-              <div class="zoom__img">
-                <img src="images/west.png" class="border-img" alt="About us">
-              </div>
-              <div class="block__content">
-                <h4>Lidia House</h4>
-                <ul class="content__items">
-                  <li>Acommodates 17 people</li>
-                  <li>14 rooms and 9 bathrooms</li>
-                  <li>Big pools with natural water</li>
-                  <li>Private beach next to the Villa</li>
-                </ul>
-                <a href="" class="btn">learn more
-                </a>
-              </div>
-            </div>
-            <div class="block large-3 medium-6">
-              <div class="zoom__img">
-                <img src="images/west.png" class="border-img" alt="About us">
-              </div>
-              <div class="block__content">
-                <h4>East Pearl House</h4>
-                <ul class="content__items">
-                  <li>Acommodates 14 people</li>
-                  <li>13 rooms and 8 bathrooms</li>
-                  <li>Big pool with natural water</li>
-                  <li>Private beach next to the Villa</li>
-                </ul>
-                <a href="" class="btn">learn more
-                </a>
-              </div>
+            <div class="block__content">
+              <h4>Lidia House</h4>
+              <ul class="content__items">
+                <li>Acommodates 17 people</li>
+                <li>14 rooms and 9 bathrooms</li>
+                <li>Big pools with natural water</li>
+                <li>Private beach next to the Villa</li>
+              </ul>
+              <a href="" class="btn">learn more
+              </a>
             </div>
           </div>
-        </section>
+          <div class="block large-3 medium-6">
+            <div class="zoom__img">
+              <img src="images/west.png" class="border-img" alt="About us">
+            </div>
+            <div class="block__content">
+              <h4>East Pearl House</h4>
+              <ul class="content__items">
+                <li>Acommodates 14 people</li>
+                <li>13 rooms and 8 bathrooms</li>
+                <li>Big pool with natural water</li>
+                <li>Private beach next to the Villa</li>
+              </ul>
+              <a href="" class="btn">learn more
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
     <!--Footer -->
       <section class="footer">
@@ -252,7 +255,10 @@
 
   <!--build:js js/main.min.js -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
   <script src="js/main.js"></script>
+  <script src="js/jquery.fitvids.js"></script>
   <!-- endbuild -->
 
   </body>

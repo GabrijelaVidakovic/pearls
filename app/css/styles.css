@@ -816,70 +816,63 @@ button.is-checked {
     LAYOUTS
 =============================================================================== */
 header {
+  max-width: 1800px;
+  margin: 0 auto; }
+
+.grid--header {
   height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px 10px;
-  margin: 0 10px;
-  background-color: #fff; }
+  margin: 10px 10px;
+  background-color: #fff;
+  width: calc(100% - 20px);
+  position: absolute;
+  max-width: calc(1800px - 20px); }
   @media only screen and (min-width: 768px) {
-    header {
+    .grid--header {
       padding: 10px 30px;
-      margin: 0 20px; } }
-  header .btn {
+      margin: 20px 20px 0;
+      width: calc(100% - 40px);
+      max-width: calc(1800px - 40px); } }
+  .grid--header .btn {
     margin-left: 30px; }
-  header img {
+  .grid--header img {
     margin: 0 auto; }
-  header .btn .icon {
+  .grid--header .btn .icon {
     margin-right: 20px;
     font-size: 20px; }
-  header .block {
+  .grid--header .block {
     padding: 0; }
-  header .telephone {
+  .grid--header .telephone {
     display: none; }
     @media only screen and (min-width: 1280px) {
-      header .telephone {
+      .grid--header .telephone {
         display: block; } }
-  header .block--right {
+  .grid--header .block--right {
     align-items: center;
     display: none; }
     @media only screen and (min-width: 768px) {
-      header .block--right {
+      .grid--header .block--right {
         display: flex;
         justify-content: flex-end; } }
 
-.header__wrapper--full {
-  margin: 0 auto;
-  padding-top: 10px;
-  background: url(../images/bg.png) no-repeat center;
-  width: 100%;
-  min-height: 50vh;
-  height: auto;
-  background-size: cover; }
+.header__image {
+  display: block;
+  width: 100vw;
+  height: initial;
+  object-fit: cover;
+  min-height: 400px;
+  object-position: bottom; }
   @media only screen and (min-width: 768px) {
-    .header__wrapper--full {
-      min-height: 100vh;
-      max-height: 1000px;
-      max-width: 1800px;
-      padding-top: 20px; } }
-
-.header__wrapper {
-  background: url(../images/contact/contact-bg.png) no-repeat bottom;
-  max-height: 600px;
-  max-width: 1800px;
-  height: 400px;
-  margin: 0 auto;
-  padding-top: 10px;
-  width: 100%;
-  background-size: cover; }
-  @media only screen and (min-width: 768px) {
-    .header__wrapper {
-      padding-top: 20px;
-      height: 600px; } }
-
-#offer__page .header__wrapper {
-  background: url(../images/offer-bg.png) no-repeat center; }
+    .header__image {
+      display: block;
+      width: 100vw;
+      object-fit: cover; } }
+  @media only screen and (min-width: 1280px) {
+    .header__image {
+      height: 100vh; } }
 
 .header__lang {
   display: inline-block;

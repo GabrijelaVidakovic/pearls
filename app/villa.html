@@ -21,22 +21,23 @@
   </head>
 
   <body>
-    <div id="villa__page" class="wrapper">
+
       <div class="container">
-        <!--Navigation-->
-        <div  class="header__wrapper border-img">
-          <nav class="navigation">
-            <i class="fal fa-times fa-2x toggle-btn"></i>
-            <ul class="menu__items menu">
-              <li class="menu__item {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
-              <li class="menu__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('form') }}">Villas</a></li>
-              <li class="menu__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('gallery') }}">What we offer</a></li>
-              <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Contact & About</a></li>
-              <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Blog</a></li>
-            </ul>
-          </nav>
+      <!--Navigation-->
+      <!-- <div  class="header__wrapper border-img"> -->
+        <nav class="navigation">
+          <i class="fal fa-times fa-2x toggle-btn"></i>
+          <ul class="menu__items menu">
+            <li class="menu__item {{ menuStateClass(app.request, 'homepage') }}"><a href="{{ path('homepage') }}">Homepage</a></li>
+            <li class="menu__item {{ menuStateClass(app.request, 'villas') }}"><a href="{{ path('form') }}">Villas</a></li>
+            <li class="menu__item {{ menuStateClass(app.request, 'offer') }}"><a href="{{ path('gallery') }}">What we offer</a></li>
+            <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Contact & About</a></li>
+            <li class="menu__item {{ menuStateClass(app.request, 'contact') }}"><a href="{{ path('adoption') }}">Blog</a></li>
+          </ul>
+        </nav>
     <!--Header-->
-          <header>
+        <header>
+          <div class="grid--header">
             <div class="block">
               <i class="fal fa-bars fa-2x toggle-btn"></i>
               <div class="header__lang language">
@@ -56,9 +57,11 @@
                 <i class="fal fa-hotel icon"></i>book now
               </a>
             </div>
-          </header>
-        </div>
+          </div>
+          <img src="/images/contact/contact-bg.png" alt="" class="header__image border-img">
+        </header>
 
+      <div class="wrapper">
     <!--Intro-->
         <section class="intro">
           <p class="uppercase headline center">Your home away from home</p>
