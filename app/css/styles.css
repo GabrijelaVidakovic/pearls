@@ -159,7 +159,7 @@ input:-webkit-autofill:active {
 .btn {
   display: inline-block;
   outline: none;
-  height: 40px;
+  padding: 20px 25px;
   width: 160px;
   color: #fff;
   background: #3e4c4d;
@@ -173,7 +173,6 @@ input:-webkit-autofill:active {
   min-width: 120px; }
   @media only screen and (min-width: 768px) {
     .btn {
-      height: 55px;
       width: 170px; } }
   .btn .icon {
     margin-right: 10px;
@@ -188,16 +187,15 @@ input:-webkit-autofill:active {
 
 .btn--large {
   width: 210px;
-  height: 80px;
-  font-size: 18px; }
+  font-size: 18px;
+  padding: 30px 25px; }
   .btn--large .fa-suitcase {
     font-size: 22px; }
 
 .btn-icon {
-  height: 80px;
   width: 220px;
   font-size: 18px;
-  padding: 23px 30px; }
+  padding: 30px 30px; }
 
 .btn--light {
   background-color: #dfe5e9;

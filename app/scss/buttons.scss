@@ -16,8 +16,8 @@ input:-webkit-autofill:active {
 .btn {
   display: inline-block;
   outline: none;
-  // padding: 20px 25px;
-  height: 40px;
+  padding: 20px 25px;
+  // height: 40px;
   width: 160px;
   color: $color-white;
   background: $color-grey;
@@ -32,7 +32,7 @@ input:-webkit-autofill:active {
 
   @include MQ-range-from($M) {
     // padding: 25px 30px;
-    height: 55px;
+    // height: 55px;
     width: 170px;
   }
 
@@ -53,8 +53,9 @@ input:-webkit-autofill:active {
 
 .btn--large {
   width: 210px;
-  height: 80px;
+  // height: 80px;
   font-size: 18px;
+  padding: 30px 25px;
 
   .fa-suitcase {
     font-size: 22px;
@@ -62,10 +63,10 @@ input:-webkit-autofill:active {
 }
 
 .btn-icon {
-  height: 80px;
+  // height: 80px;
   width: 220px;
   font-size: 18px;
-  padding: 23px 30px;
+  padding: 30px 30px;
 }
 
 .btn--light {
