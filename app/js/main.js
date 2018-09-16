@@ -104,23 +104,23 @@ $grid.isotope({
     },
     sortBy : 'selected',
   })
-
-  $items.click(function(){
-    var $this = $(this);
-    // don't proceed if already selected
-    var $previousSelected = $('.selected');
-    if ( !$this.hasClass('selected') ) {
-      $this.addClass('selected');
-    }
-
-    $previousSelected.removeClass('selected');
-
-    // update sortData for new items size
-    $grid
-      .isotope( 'updateSortData', $this )
-      .isotope( 'updateSortData', $previousSelected )
-      .isotope();
-  });
+  //
+  // $items.click(function(){
+  //   var $this = $(this);
+  //   // don't proceed if already selected
+  //   var $previousSelected = $('.selected');
+  //   if ( !$this.hasClass('selected') ) {
+  //     $this.addClass('selected');
+  //   }
+  //
+  //   $previousSelected.removeClass('selected');
+  //
+  //   // update sortData for new items size
+  //   $grid
+  //     .isotope( 'updateSortData', $this )
+  //     .isotope( 'updateSortData', $previousSelected )
+  //     .isotope();
+  // });
 
 // bind filter button click
 $('.button-group').on('click', 'button', function () {
@@ -198,3 +198,15 @@ $('#show-more').on('click', function (e) {
     showNextItems(next_items);
 });
 hideItems(initial_items);
+
+
+// Init fancyBox
+$('[data-fancybox^="gallery"]').fancybox({
+  thumbs : {
+    autoStart : true
+  },
+  buttons : [
+    'zoom',
+    'close'
+  ]
+});
